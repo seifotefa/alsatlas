@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import { Activity, ArrowRight, Calendar, Check, ChevronRight, FileText, FlaskConical, HeartPulse, Menu, MessageCircle, Mic, Pause, Play, Plus, Send, ShieldCheck, Sparkles, Stethoscope, Upload, Users, Video, X } from 'lucide-react';
 import './app-overhaul.css';
 type View='home'|'survey'|'dashboard'|'research'; type Tab='overview'|'checkin'|'progress'|'referral'|'research'|'care'; const api='/api';
