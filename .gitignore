@@ -1,0 +1,16 @@
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+apps/*/dist/
+.env
+*.py[cod]
+models/*.joblib
+data/raw/**
+!data/raw/README.md
+data/interim/**
+!data/interim/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+reports/*.json
+

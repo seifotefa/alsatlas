@@ -1,0 +1,10 @@
+name: alsense-mvp
+runtime: docker
+port: 8787
+healthcheck: /api/health
+env:
+  - GEMINI_API_KEY
+  - ELEVENLABS_API_KEY
+  - ELEVENLABS_VOICE_ID
+  - TIGERDATA_DATABASE_URL
+  - SOLANA_RPC_URL

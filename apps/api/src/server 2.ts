@@ -1,0 +1,11 @@
+import express from 'express';
+import cors from 'cors';
+import { z } from 'zod';
+const app=express();app.use(cors());app.use(express.json({limit:'2mb'}));
+const integrations={gemini:{status:'simulated',purpose:'document and video feature extraction'},elevenlabs:{status:'planned',purpose:'accessible audio and voice entry'},tigerData:{status:'adapter-ready',purpose:'longitudinal time-series storage'},solana:{status:'devnet-simulated',purpose:'research contribution receipts and rewards'},vultr:{status:'deployment-ready',purpose:'API and inference hosting'}};
+app.get('/api/health',(_,res)=>res.json({ok:true,service:'alsense-api',integrations}));
+app.get('/api/demo/patient',(_,res)=>res.json({id:'demo-alex-chen',fictional:true,trainingEligible:false,name:'Alex Chen',alsfrs:[{month:0,value:48},{month:6,value:43},{month:12,value:39},{month:18,value:36},{month:24,value:33},{month:27,value:32}],latest:{fvcSitting:76,fvcSupine:61,speechMorning:98,speechAfternoon:91,weightKg:77.5}}));
+const checkin=z.object({patientId:z.string(),energy:z.enum(['low','usual','good']),note:z.string().max(1000).optional(),breathingAtRest:z.boolean(),researchConsent:z.boolean().default(false)});
+app.post('/api/checkins',(req,res)=>{const parsed=checkin.safeParse(req.body);if(!parsed.success)return res.status(400).json({error:'Invalid check-in',details:parsed.error.flatten()});res.status(201).json({id:`demo-${Date.now()}`,saved:true,simulated:true,trainingEligible:false,disclosure:'Stored in memory for the MVP. No clinical inference was performed.',data:parsed.data});});
+app.post('/api/referrals',(_,res)=>res.json({simulated:true,title:'Neurology referral support summary',disclosure:'This report organizes reported information and does not diagnose ALS.',urgentWarning:'Seek urgent medical care for severe breathing difficulty, choking, or sudden neurological changes.'}));
+app.listen(Number(process.env.PORT||8787),()=>console.log('ALSense API listening on http://localhost:8787'));
