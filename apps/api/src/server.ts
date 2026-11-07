@@ -3,7 +3,7 @@ import { evaluateReferALS } from './referals.js';
 import { loadDemoState, persistToTiger, saveDemoState } from './storage.js';
 const patient={id:'demo-alex-chen',name:'Alex Chen',fictional:true,trainingEligible:false,alsfrs:[{month:0,value:48},{month:6,value:43},{month:12,value:39},{month:18,value:36},{month:24,value:33},{month:27,value:32}],latest:{fvcSitting:76,fvcSupine:61,speechMorning:98,speechAfternoon:91,weightKg:77.5}};
 const state=loadDemoState();
-const members=state.members; const checkins:any[]=state.checkins; const media:any[]=state.media; const referrals:any[]=state.referrals; let consent=state.consent;
+const members=state.members; const checkins:any[]=state.checkins; const media:any[]=state.media; const referrals:any[]=state.referrals; const consultations:any[]=state.consultations; const observations:any[]=state.observations; let consent=state.consent;
 if(checkins.length===0){for(let i=0;i<14;i++)checkins.push({id:`seed-checkin-${i+1}`,patientId:patient.id,createdAt:new Date(Date.now()-(13-i)*86400000).toISOString(),energy:[3,3,2,3,2,2,3,3,2,3,2,2,3,3][i],note:['Walking steady','Speech a little softer after lunch','Energy lower after 4 PM','No new concerns','Needed one rest break','Caregiver observed slower stairs','Voice sample captured','About usual','Foot drag noted once','No new concerns','Good morning energy','Swallowing question to discuss','About usual','Ready for review'][i],breathingAtRest:false,researchConsent:false,synthetic:true});saveDemoState(state)}
 let backboardAssistantId=process.env.BACKBOARD_ASSISTANT_ID||'';
 const has=(key:string)=>Boolean(process.env[key]);
@@ -12,7 +12,7 @@ const json=(res:ServerResponse,status:number,data:unknown)=>{res.writeHead(statu
 const body=async(req:IncomingMessage)=>{let raw='';for await(const chunk of req)raw+=chunk;try{return JSON.parse(raw||'{}')}catch{return{}}};
 const escalationFor=(message:string)=>{const q=message.toLowerCase();if(/severe|cannot breathe|can.t breathe|choking now|sudden weakness/.test(q))return'urgent';if(/breath|swallow|chok|fall|worsen|new symptom/.test(q))return'physician';if(/appointment|consult|doctor|specialist/.test(q))return'virtual';return'none'};
 const server=createServer(async(req,res)=>{const url=new URL(req.url||'/',`http://${req.headers.host||'localhost'}`);if(req.method==='OPTIONS'){res.writeHead(204,{'access-control-allow-origin':'*','access-control-allow-headers':'content-type','access-control-allow-methods':'GET,POST,OPTIONS'});return res.end()}
-  if(req.method==='GET'&&url.pathname==='/api/health')return json(res,200,{ok:true,service:'alsense-api',integrations:integrations()});
+  if(req.method==='GET'&&url.pathname==='/api/health')return json(res,200,{ok:true,service:'als-atlas-api',integrations:integrations()});
   if(req.method==='GET'&&url.pathname==='/api/integrations')return json(res,200,integrations());
   if(req.method==='GET'&&url.pathname==='/api/integrations/tigerdata/migration')return json(res,200,{migration:'apps/api/migrations/001_als_atlas.sql',tables:['patients','observations','checkins','research_consent','referral_reports','media_assets'],configured:Boolean(process.env.TIGERDATA_DATABASE_URL),disclosure:'Run the migration against your Tiger Data PostgreSQL instance before enabling production persistence.'});
   if(req.method==='GET'&&url.pathname==='/api/demo/patient')return json(res,200,patient);
@@ -38,4 +38,4 @@ const server=createServer(async(req,res)=>{const url=new URL(req.url||'/',`http:
   if(req.method==='GET'&&url.pathname==='/api/referrals')return json(res,200,{patientId:patient.id,referrals});
   return json(res,404,{error:'Not found'});
 });
-server.listen(Number(process.env.PORT||8787),()=>console.log('ALSense API listening on http://localhost:8787'));
+server.listen(Number(process.env.PORT||8787),()=>console.log('ALS Atlas API listening on http://localhost:8787'));
