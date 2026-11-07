@@ -1,0 +1,1121 @@
+            BioHacks
+            McMaster University, Hamilton, Ontario
+
+
+
+
+BioHacks 2026
+Hacker Package
+November 7-8, 2026
+Welcome to
+BioHacks
+2026
+You made it. For the next two days you and your
+team will take on one patient case, choose a track
+and build something for him.
+
+This package holds the schedule, the prizes, how to
+submit and the full case file. Read the case first.
+Then go build.
+
+
+Discord
+Every announcement this weekend goes out on the BioHacks Discord.
+discord.com/invite/mGZRP7vpj
+
+
+Instagram
+Follow
+
+
+@_biohacks
+and tag us in your posts from the weekend.
+
+
+Organizers
+Find us at the check-in desk on the 2nd floor, outside the MCCD 2100 auditorium, or
+email bioeng4youth@gmail.com.
+
+
+
+
+BioHacks 2026                                                                         2
+Safety and help
+McMaster Security, 24 hours
+
+
+
+905-522-4135
+From any campus phone, dial               88
+EFRT, McMaster's Emergency First Response Team, is a
+team of student first responders on campus. Reach them
+through Security at 905-522-4135 or 88.
+
+Emergency 911
+
+After you call, tell the nearest organizer.
+
+
+Code of conduct                           Fire alarm
+BioHacks follows the MLH Code of          If the alarm sounds, leave by the
+Conduct. Harassment of any kind is not    nearest exit and wait outside until an
+tolerated. Report a concern to any        organizer says it is safe to return.
+organizer, or to MLH at +1 343 453 4532
+or incidents@mlh.io.                      Overnight
+                                          Hacking runs through the night. The
+                                          MCCD 2100 auditorium is open for
+                                          sleeping. Keep your laptop and
+                                          valuables with you or with a
+                                          teammate.
+
+Halal and vegetarian options are served at every meal.
+
+
+
+BioHacks 2026                                                                      3
+Saturday, November 7
+   Ceremonies         Guest lectures       Workshops           Food      Judging
+   Check-in, booths and deadline
+
+            Schedule
+    8 AM
+                                                                                         Team form
+
+             Doors open and check-in
+    9 AM
+             2nd floor, outside the MCCD 2100 auditorium
+
+
+   10 AM
+             Opening ceremony
+             MCCD 2100 auditorium
+    11 AM
+             Team formation                   Team registration closes at 12:00 PM      Sponsor booths
+             Anyone without a team is matched with one here.                            11:00 AM to 6:30 PM
+    12 PM                                                                               2nd floor, outside the
+             Lunch                                                                      auditorium
+             Arts Quad
+     1 PM
+             CAD for Medical Devices, from Sketch to 3D Print
+             Workshop, MCCD 3200
+    2 PM
+             Hacking with GitHub Copilot                      MLH workshop, MCCD 7150
+
+             Intro to Google AI Studio                        MLH workshop, MCCD 7150
+    3 PM
+             Guest lecture with Dr. Tandon
+             GUS Medical and Veterinary Schools, MCCD 3200
+    4 PM
+
+
+
+    5 PM
+             Guest lecture with Dr. Rock
+             UHN Michener Institute of Education, MCCD 7140
+    6 PM
+             Pitching workshop
+             MCCD 2100 auditorium
+    7 PM
+
+
+             Dinner                                                         Arts Quad
+    8 PM
+             TechTogether Meetup
+             MLH, MCCD 7140
+    9 PM
+
+
+
+   10 PM
+
+
+
+    11 PM
+
+
+
+   12 AM
+             Midnight snack                                      MCCD 2100 auditorium
+
+
+
+
+BioHacks 2026                                                                                                    4
+Sunday, November 8
+   Ceremonies        Guest lectures    Workshops      Food   Judging
+   Check-in, booths and deadline
+
+            Schedule
+    8 AM
+
+             Breakfast
+             MCCD 2100 auditorium
+    9 AM
+
+
+
+
+   10 AM
+
+
+
+
+    11 AM
+
+
+
+             Submissions due on Devpost at 11:30 AM
+    12 PM
+             Lunch
+             Arts Quad
+
+
+     1 PM
+
+
+
+             Expo judging
+    2 PM     MCCD 7110 and 7120
+
+
+
+
+    3 PM
+
+
+
+
+    4 PM
+
+
+
+             Closing ceremony
+    5 PM     MCCD 2100 auditorium
+
+
+
+             Event ends
+    6 PM
+
+
+
+
+BioHacks 2026                                                          5
+Submission and
+judging
+Projects are due on Devpost
+by 11:30 AM on Sunday
+1        Team up. Anyone without a team is matched with one during
+         team formation at 11:00 AM on Saturday. Form a team of 2 to 4
+         and lock in one track on the team form by 12:00 PM on
+         Saturday. Each team competes in exactly that one track and
+         is judged only in it.
+
+
+
+2        Build. Workshops, guest lectures, the MLH hardware
+         lab and our 3D printers are open to every team. Ask
+         an organizer to print a part.
+
+
+
+3        Submit. One project per team on Devpost by
+         11:30 AM on Sunday at
+         biohacksmcmaster.devpost.com.
+
+         External sponsor prizes are optional. A team
+         can opt in to any of them on Devpost and win
+                                                               Devpost
+         them alongside its track result.
+
+
+
+4        Present. Expo judging runs from 1:30 to 3:00 PM on
+         Sunday in MCCD 7110 and 7120. Judges come to
+         your table.
+
+
+
+5        Celebrate. Winners are announced at the closing ceremony
+         at 4:30 PM in the MCCD 2100 auditorium.
+
+
+
+
+BioHacks 2026                                                            6
+Alex Chen
+Alex is 47. He has taught senior biology at a high school on the Hamilton mountain for
+nineteen years, writes everything on the whiteboard and walks the rows while students
+work. He coached cross-country for a decade and ran half-marathons until the spring of
+2025.
+
+He lives in Westdale with his partner Jordan, a medical radiation technologist on 7 am to 4
+pm shifts, and their two children, Maya, 16, and Leo, 14. In June 2024 a student asked
+whether his marker had run dry. His handwriting had started to fade out halfway across the
+board. The marker was fine. He waited a few months, then saw his family doctor. What
+follows is his file.
+
+                                                                                                          Referral
+                                                                                                 14 October 2024
+Mountain Brow Family Health Team                                                              Alex Chen, 45, male
+Hamilton, Ontario                                                             To: Plastic and Hand Surgery Clinic
+
+Re: Right hand weakness and deteriorating handwriting, four months
+
+Thank you for seeing Alex, a 45-year-old right-handed teacher who is otherwise well. Since June he has
+noticed that his handwriting fades across the page and that his right thumb and index finger tire quickly
+when writing on a whiteboard. He has started dropping his whiteboard marker and his coffee cup. No pain.
+No numbness or tingling. He reports some cramping in the right forearm at night.
+
+On examination the right thenar eminence looks a little flatter than the left. Grip is slightly weaker on the
+right. Phalen's test was equivocal. Sensation to light touch was normal in all fingers. He works at a desk in the
+evenings marking, and I suspect a carpal tunnel syndrome or a median neuropathy at the wrist.
+
+I would be grateful for your assessment and for nerve conduction studies at the wrist. He has no significant
+past history, takes no medication, does not smoke and runs regularly.
+
+Dr. Priya Raman, MD, CCFP
+Family physician
+
+                                                                                  Consultation 9 December 2024
+                                                                                          Follow-up 21 April 2025
+Plastic and Hand Surgery Clinic                                                                        Alex Chen
+Consultation and follow-up. Dictated, not read.                                            Copy to: Dr. P. Raman
+
+Re: Query right carpal tunnel syndrome
+
+Consultation. Six months of right hand weakness affecting fine tasks, no sensory symptoms. Nerve
+conduction across the right wrist: median sensory and motor latencies within normal limits; no slowing
+across the carpal tunnel. Visible wasting of the right thenar muscles and the muscle between thumb and
+index finger. Grip 4 out of 5 on the right. Given the thenar wasting, his occupational demands and his wish to
+try something, I offered a right carpal tunnel release as a reasonable trial of treatment. He elected to
+proceed after discussion of the risks and the uncertain benefit. Surgery 20 January 2025, uncomplicated.
+
+Follow-up, three months after surgery. Wound well healed. He reports no improvement. If anything the
+hand is weaker, and he now notices twitching under the skin of the forearm, which he describes as "rippling".
+He has also begun to mention his right foot catching on stairs. I have no further surgical options to offer.
+Returned to the care of his family physician with a suggestion that a neurological opinion may be helpful if
+symptoms progress.
+
+Dr. Marcus Oyelaran, MD, FRCSC
+Plastic and reconstructive surgery
+
+BioHacks 2026                                                                                                   7
+                                                                                            10 February 2026
+                                                                                                    Alex Chen
+Westdale Physiotherapy and Sports Clinic                       12 August 2025 to 5 February 2026, 18 sessions
+Discharge summary                                                                            To: Dr. P. Raman
+
+
+Re: Right foot drop, treated as peroneal weakness. Not improving.
+
+Alex was referred in August 2025 for a right foot that catches on curbs and slaps on landing. He had
+stopped running in May because the right leg "felt heavy and would not do what I asked". A lumbar
+spine MRI in December 2025 was reported as unremarkable for his age, with no nerve root compression.
+
+Over six months of strengthening, balance work and a trial of an off-the-shelf ankle brace, his right
+ankle dorsiflexion has gone from 4 out of 5 to 3 out of 5. Calf and thigh circumference on the right are
+each about 2 cm smaller than the left. He now uses a cane outside the house. He reports two falls, both
+in the evening, one on the stairs at home and one leaving the school at dusk. He has stopped cycling to
+work and drives instead.
+
+Three things concern me. The weakness is progressing despite treatment. His reflexes are brisk,
+including at the right ankle, which is not what I would expect from a peripheral nerve problem. And he
+mentions that his right hand has been weak for well over a year and that a wrist operation did not help
+it. I do not think this is an ankle problem. I would strongly recommend a neurology referral, and I have
+told Alex so.
+
+Daniela Ferreira, PT, MScPT
+Registered physiotherapist
+
+
+                                                                                     Referral, marked urgent
+                                                                                            16 February 2026
+Mountain Brow Family Health Team                                                         Alex Chen, 46, male
+Hamilton, Ontario                                                             To: Neurology, outpatient clinic
+
+
+Re: Progressive painless weakness, right arm and leg, twenty months
+
+I would be grateful if you could see Alex soon. I first saw him in October 2024 with right hand weakness
+that I referred as a carpal tunnel syndrome. His wrist studies were normal, a carpal tunnel release in
+January 2025 did not help, and in the past year he has developed a right foot drop that physiotherapy
+has not improved and that a lumbar MRI does not explain.
+
+Today he reports muscle cramps, visible twitching in both forearms and lately the right thigh, and that
+he has lost about 6 kg without trying since the summer. His voice is unchanged as far as he is aware,
+although his partner says he is quieter in the evenings. There is no pain, no numbness, no change in
+bladder or bowel function and no visual symptoms. On examination he has wasting of the right hand
+and brisk reflexes in all four limbs. I am concerned about a progressive neurological condition and
+would value your opinion. I am sorry this has taken as long as it has.
+
+Dr. Priya Raman, MD, CCFP
+
+
+
+
+BioHacks 2026                                                                                               8
+                                                                                             Seen 11 June 2026
+                                                                            Referral received 18 February 2026
+Neurology Outpatient Clinic                                                                Alex Chen, 47, male
+Consultation note. Neuromuscular service.                                               Referring: Dr. P. Raman
+
+
+Reason for referral: progressive painless weakness, right arm and leg, now two years
+
+History
+Right-handed, 47. First symptom June 2024: handwriting fading on the whiteboard, fatigue in the right
+thumb and index finger. Right carpal tunnel release January 2025 after normal wrist studies, no benefit.
+Right foot drop from spring 2025, progressing through physiotherapy; lumbar MRI unremarkable.
+Cramps in both calves and the right forearm, worse at night. Fasciculations noticed in the forearms
+since April 2025, now also in the right thigh. Unintentional weight loss, 86 kg two years ago to 78 kg
+today.
+
+On direct questioning: speech is clear in the morning but his partner and students notice slurring by late
+afternoon, which he had put down to tiredness. Occasional coughing when drinking water quickly. He
+has started sleeping on two pillows because he feels "short of air" lying flat. No diplopia, no sensory
+symptoms, no sphincter change. Mood is low but he denies hopelessness. He is still teaching full time
+and still drives.
+
+Family history: no neurological disease in parents, siblings or grandparents. No dementia. Social: lives
+with partner and two teenagers, non-smoker, two drinks a week. No toxin exposure.
+
+Examination
+General. Thin. Weight 78 kg. Normal cognition in conversation, but on a bedside screen he produced
+only nine words beginning with the same letter in one minute, with intact memory and orientation.
+
+Cranial nerves. Eye movements full. Face symmetric. Tongue shows mild wasting with fasciculations at
+rest. Jaw jerk brisk. Palate elevates symmetrically. Speech mildly spastic in quality late in the
+consultation, intelligible.
+
+Upper limbs. Marked wasting of the right thenar eminence and first dorsal interosseous, with relative
+sparing of the hypothenar muscles. Fasciculations in both forearms and the right deltoid. Tone
+increased on the right. Power: right grip 4/5, right finger abduction 3/5, right thumb abduction 3/5, left
+upper limb 5/5. Reflexes brisk and symmetric, right more than left. Hoffmann sign present on the right.
+
+Lower limbs. Right calf wasting. Fasciculations in the right quadriceps. Tone increased bilaterally. Power:
+right ankle dorsiflexion 3/5, right hip flexion 4/5, left lower limb 5/5. Reflexes brisk, with three beats of
+clonus at the right ankle. Right plantar response extensor, left flexor.
+
+Sensation. Normal to light touch, pinprick, vibration and proprioception throughout. Gait. Right foot
+drop with a high-stepping gait and a cane. Unable to walk on heels on the right. Romberg negative.
+
+Investigations requested
+Nerve conduction studies and needle electromyography, four regions. MRI brain and cervical spine.
+Bloods as per neuromuscular panel. Pulmonary function tests upright and supine. Referral to speech-
+language pathology. Review in four weeks with results.
+
+Dr. Hannah Weiss-Okafor, MD, FRCPC
+Neurologist, neuromuscular disease
+
+
+
+
+BioHacks 2026                                                                                                9
+                                                                                                      18 June 2026
+Electromyography Laboratory                                                                              Alex Chen
+Nerve conduction studies and needle EMG                                          Requested by: Dr. H. Weiss-Okafor
+
+
+Nerve conduction studies
+
+Nerve                                     Result                                        Reference
+
+Right median motor, to thumb              Amplitude 1.6 mV, latency and velocity        Amplitude above 4.0
+muscles                                   normal                                        mV
+
+Right ulnar motor, to little-finger       Amplitude 5.5 mV, velocity normal, no         Amplitude above 6.0
+muscles                                   conduction block                              mV
+
+Right peroneal motor, to foot             Amplitude 0.9 mV, velocity normal             Amplitude above 2.0
+                                                                                        mV
+
+Left median and ulnar motor               Amplitudes at lower limit of normal
+
+Sensory studies, median, ulnar,           All normal                                    Normal
+sural, both sides
+
+
+Needle electromyography
+
+Region              Muscles sampled                         Findings
+
+Bulbar              Tongue                                  Fasciculation potentials, fibrillations, enlarged
+                                                            motor units
+
+Cervical            Right first dorsal interosseous,        Fibrillations and positive sharp waves,
+                    right biceps, left deltoid              fasciculations, large polyphasic motor units with
+                                                            reduced recruitment, right more than left
+
+Thoracic            Right T9 paraspinal                     Fibrillations, fasciculations
+
+Lumbosacral         Right tibialis anterior, right vastus   Active denervation and chronic reinnervation in
+                    lateralis, left gastrocnemius           all three; severely reduced recruitment in tibialis
+                                                            anterior
+
+
+Summary
+Widespread active denervation and chronic reinnervation in four body regions, including clinically
+unaffected muscles, with normal sensory conduction and no conduction block. There is no
+electrophysiological evidence of a peripheral neuropathy, a disorder of the neuromuscular junction, or
+a myopathy.
+
+Dr. Hannah Weiss-Okafor, MD, FRCPC
+
+
+
+
+BioHacks 2026                                                                                                     10
+Laboratory Results                                                                  Collected 12 June 2026
+Neuromuscular panel, venous blood                                                                Alex Chen
+
+
+Test                                            Result                            Reference
+
+Creatine kinase                                 470 U/L                           Below 195 U/L
+
+Complete blood count, electrolytes, renal and   All within reference range
+liver function, glucose, calcium, thyroid,
+vitamin B12
+
+Serum protein electrophoresis and               No paraprotein                    None
+immunofixation
+
+HIV, syphilis, Lyme serology; anti-GM1          Negative                          Negative
+antibodies; heavy metals
+
+Serum neurofilament light chain                 88 pg/mL                          Below 15 pg/mL at
+                                                                                  age 47
+
+Genetic panel: C9orf72 repeat expansion, SOD1, No pathogenic variant detected     Reported 30 July
+TARDBP, FUS and 28 further genes                                                  2026
+
+
+
+Pulmonary Function Laboratory                                                                 18 June 2026
+Spirometry, upright and supine                                                                   Alex Chen
+
+
+Measure                                         Result                            Reference
+
+Forced vital capacity, sitting                  78 per cent of predicted          Above 80 per cent
+
+Forced vital capacity, lying flat               64 per cent of predicted          Within 10 per cent of
+                                                                                  the sitting value
+
+Sniff nasal inspiratory pressure                52 cm H2O                         Above 70 cm H2O
+
+
+Comment: the fall in vital capacity on lying flat indicates diaphragm weakness.
+
+
+
+
+BioHacks 2026                                                                                             11
+                                                                                                 16 June 2026
+Diagnostic Imaging                                                                                  Alex Chen
+MRI brain and cervical spine, with and without contrast                     Requested by: Dr. H. Weiss-Okafor
+
+
+Clinical information: progressive upper and lower limb weakness with brisk reflexes. Exclude cord
+compression. Query motor neuron disease.
+
+
+
+
+A. Brain, axial FLAIR at the level of   B. Brain, axial susceptibility-    C. Cervical spine, sagittal T2.
+the internal capsule. Symmetric         weighted near the vertex. A thin   Normal alignment. No disc
+hyperintensity along the posterior      band of low signal along the       protrusion, canal stenosis, cord
+limb of the internal capsule on         precentral gyrus on both sides     compression or intrinsic cord
+both sides (arrows), following the      (arrows), sometimes called the     signal change from the foramen
+corticospinal tracts.                   motor band sign.                   magnum to T2.
+
+
+Impression
+- Bilateral, symmetric corticospinal tract signal change and a motor band sign. These findings are
+supportive of a degenerative process affecting the upper motor neurons in the appropriate clinical
+context. They are not specific.
+- No structural lesion of the brain or cervical cord to account for the patient's weakness. Specifically, no
+cervical spondylotic myelopathy, no demyelinating lesion, no mass.
+- No abnormal enhancement after contrast, so nothing to suggest tumour, infection or inflammation.
+
+Dr. Thanh Nguyen, MD, FRCPC
+Neuroradiology
+
+
+
+
+BioHacks 2026                                                                                                 12
+                                                                                                   14 July 2026
+Neurology Outpatient Clinic                                                                Alex Chen, 47, male
+Letter to referring physician. Copy given to the patient at his request.                      To: Dr. P. Raman
+
+
+Diagnosis: amyotrophic lateral sclerosis (ALS), limb onset, with early bulbar and respiratory
+involvement
+
+Dear Dr. Raman,
+
+I saw Alex and his partner Jordan today to go through his results, and I am sorry to say that the
+diagnosis is ALS. I spent the appointment with them and the clinic social worker, and they will return in
+two weeks to talk further. He asked that this letter be written in plain language and that he be given a
+copy, which I have done.
+
+How the diagnosis was made. ALS is diagnosed on the clinical picture, not on any single test. Alex has
+progressive weakness with signs of both upper motor neuron damage (brisk reflexes, clonus, a
+Hoffmann sign, an upgoing plantar, spastic speech) and lower motor neuron damage (wasting,
+fasciculations, low motor amplitudes, denervation on EMG) in the same regions, now spread across all
+four: bulbar, cervical, thoracic and lumbosacral. Sensation is normal. The MRI excludes the structural
+conditions that can mimic this, the bloods exclude the treatable ones, and the EMG shows the process
+is active and widespread. He meets the Gold Coast criteria without ambiguity. In retrospect he probably
+met them a year ago.
+
+What ALS is. A progressive loss of the motor neurons that drive voluntary muscle, in the brain and the
+spinal cord. The muscle itself is healthy; it wastes because the nerve supply dies. Sensation, eye
+movements, bladder and bowel are spared. Thinking is usually spared, though about half of patients
+develop some change in word-finding or executive function, and Alex's reduced verbal fluency is of that
+kind. The cause in his case, as in about nine of ten cases, is unknown.
+
+Treatment. There is no cure. Two drugs have been shown to slow progression modestly: riluzole, which I
+have started today, and edaravone, which we will discuss. A third drug, tofersen, is the first treatment to
+act on a cause of ALS. It is an antisense oligonucleotide that silences a faulty SOD1 gene, and because it
+cannot cross the blood-brain barrier it is given by lumbar puncture every month. Health Canada
+authorised it with conditions in February 2025. It applies to the roughly two per cent of patients who
+carry a SOD1 mutation. Alex's genetic panel was negative, so, like most people with this disease, he has
+no treatment directed at its cause. Beyond drugs, what has been shown to lengthen life is care at a
+multidisciplinary clinic, keeping his weight up, and breathing support at night once it is needed.
+
+What to expect. His progression over two years has been steady rather than rapid, which is in his
+favour. The pattern will continue: the right hand and leg will weaken further and the left side will follow;
+speech, swallowing and breathing have begun to be involved and will progress. I have been honest with
+them that the median survival from symptom onset is two to four years, that the range is wide, and that
+the decisions ahead (a feeding tube, ventilation at night, how he wants to communicate when speech
+is difficult) are better made early. I have referred him to the regional ALS clinic, which will see him every
+three months, and to ALS Canada for equipment and support.
+
+He intends to keep teaching this year. I see no reason he should not.
+
+Dr. Hannah Weiss-Okafor, MD, FRCPC
+Neurologist, neuromuscular disease
+
+
+
+
+BioHacks 2026                                                                                                13
+                                                                                           22 September 2026
+Regional ALS Clinic                                                                              Alex Chen, 47
+Multidisciplinary summary. First visit.                 27 months from first symptom, 10 weeks from diagnosis
+
+
+Medication          Riluzole 50 mg twice daily since July. Tolerating. Edaravone declined for now.
+Living situation    Two-storey house, bedroom and only full bathroom upstairs, fourteen stairs with a rail
+                    on the left. Partner works 7 am to 4 pm; Alex is alone at home on his non-teaching
+                    days and from the end of school until 4:30 pm. Children are at school until 3 pm.
+Work                Full-time teaching, four classes a day. School has agreed to a stool and a microphone
+                    on request; he has not asked for either.
+
+Neurology
+ALSFRS-R 32 of 48 (bulbar 9, fine motor 6, gross motor 7, breathing 10). Decline of about 0.6 points per
+month since onset, roughly linear. Right hand now 3/5 grip, cannot sustain a pinch for more than a few
+seconds. Left hand weaker than in June: grip 4/5, early first dorsal interosseous wasting. Cognitive
+screen (ECAS) 101 of 136, with verbal fluency and executive scores below cut-off and memory, language
+and visuospatial scores normal.
+
+Speech-language pathology
+Speech is intelligible but effortful by late afternoon. Reading passage: 165 words per minute at 9 am, 118
+at 4 pm; sentence intelligibility 98 per cent in the morning, 91 per cent in the afternoon. He reports that
+students at the back of the room have started asking him to repeat himself after lunch and that he has
+stopped doing the end-of-day recap. Voice banking discussed; he has not started and is reluctant ("it
+feels like giving up"). Timed water swallow: cough on thin liquid; solids and thickened liquids unaffected.
+He has started avoiding eating in the staff room.
+
+Dietitian
+Weight 77.5 kg, from 86 kg. Meals take 35 to 40 minutes; he tires before finishing. Right-handed cutlery
+no longer practical; he has been eating with a spoon in the left hand. Calorie supplement started.
+Feeding tube discussed as a future decision while breathing capacity is still above 50 per cent. He says
+Sunday cooking for the family is the thing he least wants to give up.
+
+Occupational therapy
+Handwriting now illegible after about ten minutes. Marks by typing with the left hand and two right
+fingers; phone use is one-handed and slow. Buttons, zips and shoelaces take help in the morning. Drives
+an automatic with the left foot off the pedals, which he has not told his insurer. Stairs are the main
+hazard: both falls were after 6 pm on the stairs or at dusk. Advised against carrying anything on the
+stairs. Home assessment booked. He has declined a stairlift "for now".
+
+Physiotherapy and respiratory
+10-metre walk with cane 14.2 seconds. Ankle-foot orthosis fitted on the right, which he wears to school
+but not at home. Forced vital capacity 76 per cent sitting, 61 per cent supine. Sleeps on two pillows,
+wakes once or twice with a dry mouth. Non-invasive ventilation discussed; not yet indicated. Cough
+peak flow 310 L/min.
+
+Social work
+Has disclosed to the school and to the children. Finances adequate while he works; partner's shifts
+cannot easily change. Wants to be "reachable and useful" while alone in the afternoons. Would like to
+get to his daughter's graduation in two years without a wheelchair.
+
+
+
+
+BioHacks 2026                                                                                               14
+Measurements
+Measure                                         Alex                           Typical
+
+
+Hand
+
+Grip strength, dynamometer                      Right 14 kg, left 32 kg        About 48 kg
+
+Key pinch                                       Right 3 kg, left 8 kg          About 11 kg
+
+Nine-hole peg test                              Right 44 s, left 23 s          About 20 s
+
+
+Speech and swallowing
+
+Speaking rate, same passage, 9 am and 4         165 and 118 words per minute   150 to 190
+pm
+
+Sentence intelligibility, 9 am and 4 pm         98 and 91 per cent             Above 97 per cent
+
+Timed water swallow, 100 mL                     Cough on thin liquid           No cough
+
+
+Breathing
+
+Forced vital capacity, sitting and lying flat   76 and 61 per cent of          Above 80; within 10 per
+                                                predicted                      cent of sitting
+
+
+Walking
+
+10-metre walk with cane                         14.2 s                         Under 8 s
+
+Falls in the past three months                  Two, both after 6 pm           None
+
+
+Progression
+
+ALSFRS-R at 0, 6, 12, 18, 24 and 27 months      48, 43, 39, 36, 33, 32         48
+
+Serum neurofilament light chain                 88 pg/mL                       Below 15 pg/mL at his age
+
+Weight                                          77.5 kg; 86 kg two years ago
+
+
+
+
+BioHacks 2026                                                                                              15
+From Alex
+You have just read two years of my life in about twenty minutes.
+
+I am still me. I still get up at six and I still argue about the Leafs. This thing
+has taken my right hand and some of my voice, and it is going to take
+more. The people around me are still here. My wife still laughs at my
+jokes. My kids still climb on me. My students still email me at midnight.
+
+I want to be in a classroom in June. I want to be the one who cooks on
+Sunday, even if it takes me all afternoon. I want my kids to remember me
+as their dad and not as a patient.
+
+Whatever you build this weekend, I hope it comes from a place of caring
+about someone like me. If it helps one person hold on to one of those
+ordinary things a little longer, you will have done something that matters
+to a whole family. Thank you for spending your weekend on us.
+
+Alex
+
+
+
+
+BioHacks 2026                                                                        16
+The tracks
+Choose one track to focus on.
+
+
+1. Detection and Diagnostics
+  Alex waited two years for a diagnosis, through four clinicians and an
+  operation that did nothing.
+  In Canada the wait is typically 15 to 27 months depending on the province.
+  Since diagnosis his disease is followed with a questionnaire every three
+  months.
+  Build something that detects the disease earlier or predicts how it will
+  progress. Use the datasets on the next page or find your own.
+
+
+2. Therapeutics and Delivery
+  The one drug that acts on a cause of ALS applies to about two in a
+  hundred patients. Alex is not one of them.
+  The two other approved drugs add months. More than fifty late-stage trials
+  have failed since riluzole was approved in 1995.
+  Getting anything into a spinal motor neuron is itself an unsolved problem.
+  Propose a therapy, or a way of delivering one, that could slow the disease
+  or protect the neurons that remain. Say what it would mean for Alex now
+  and for someone where he was in 2024.
+
+
+3. Wearable Devices and Quality of Life
+  He is strong in the morning and weak by the afternoon. He teaches in a
+  classroom where he needs to be heard, he is alone at home until 4:30, and
+  he has fallen on the stairs.
+  His right hand has a few seconds of pinch left. His left is starting to go.
+  Most assistive devices end up in a drawer because nobody asked the
+  person what they wanted.
+  Design a device or tool that lets Alex keep one thing that matters to him as
+  his abilities change. The MLH hardware lab is open all weekend if you want
+  to build.
+
+
+
+
+BioHacks 2026                                                                    17
+Data
+Dataset                 What it is                                                 Access
+
+ALS Focus, Harvard      Survey data from the ALS Association: self-reported        Open download after
+Dataverse               ALSFRS-R and vital capacity over time (892 records),       accepting the data use
+                        demographics for 1,545 people with ALS and                 terms. No account.
+                        caregivers, health status and telehealth responses,
+                        with a data dictionary.
+
+ALS progression data,   1,822 people with ALS from the 2012 DREAM challenge,       Open download, one text
+Efron and Hastie        drawn from clinical trial records: demographics, onset file. No account.
+                        site, symptoms, ALSFRS items, vital capacity, vitals and
+                        weight summarised per patient, with the rate of
+                        ALSFRS decline (dFRS) as the target. 371 columns.
+                        Documented in the CASIdata R package.
+
+Gait in                 Foot-force and stride-interval recordings from 13          Open download, no
+Neurodegenerative       people with ALS, 15 with Parkinson's, 20 with              account.
+Disease, PhysioNet      Huntington's and 16 controls.
+
+VOC-ALS, Synapse        1,224 recordings of sustained vowels and syllable          Free Synapse account
+                        repetition from 102 people with ALS and 51 matched         (registered user).
+                        controls, labelled with ALSFRS-R speech score and          Synapse terms of use.
+                        dysarthria severity. Paper: Scientific Data 2024.
+
+bigP3BCI, PhysioNet     P300 speller EEG from 326 participant sessions across      Open download. CC BY
+                        20 studies, including people with ALS with ALSFRS-R in     4.0.
+                        the file headers. 10 GB zipped; single studies can be
+                        pulled separately.
+
+EEGET-ALS, Figshare     32-channel EEG and eye tracking from six people with       Open download, no
+                        ALS using an eye-gaze speller at home over several         account. CC0.
+                        months, and 170 controls. 1.6 GB. Paper: Scientific Data
+                        2024.
+
+Seattle ALS Patient     Interviews every three months for 18 months with 143       Open download. CC BY-
+Profile Database        people with ALS and 123 partners: coping, support,         NC 3.0.
+                        devices, psychological health, outcomes. Mendeley
+                        Data.
+
+
+
+
+BioHacks 2026                                                                                                18
+References
+1. ALS Society of Canada. ReferALS early referral tool for physicians and patients.
+   als.ca/resource/referals-early-referral-tool
+2. Shefner JM, Al-Chalabi A, Baker MR, et al. A proposal for new diagnostic criteria for ALS (the Gold
+   Coast criteria). Clin Neurophysiol. 2020;131(8):1975-1978.
+3. Richards D, Morren JA, Pioro EP. Time to diagnosis and factors affecting diagnostic delay in
+   amyotrophic lateral sclerosis. In: Araki T, ed. Amyotrophic Lateral Sclerosis. Exon Publications; 2021.
+4. Hodgkinson VL, et al. Provincial differences in the diagnosis and care of amyotrophic lateral
+   sclerosis. Can J Neurol Sci. 2018;45(6):652-659.
+5. Westeneng HJ, et al. Prognosis for patients with amyotrophic lateral sclerosis: development and
+   validation of a personalised prediction model. Lancet Neurol. 2018;17(5):423-433.
+6. Health Canada. Summary Basis of Decision, Qalsody (tofersen). Notice of Compliance with
+   conditions, 28 February 2025.
+7. Phillips B, Zhao H. Predictors of assistive technology abandonment. Assist Technol. 1993;5(1):36-45.
+8. Ontario Ministry of Health. Assistive Devices Program. ontario.ca/page/assistive-devices-program
+
+
+A note on the images
+The MRI images on page 12 are reproduced from open-access teaching material. They illustrate the
+findings described in the report and are not from one patient. Alex, his family and every clinician and
+practice in this file are fictional.
+
+
+
+
+BioHacks 2026                                                                                            19
+Judging rubric
+Detection and Diagnostics
+ Criterion        Level 4                 Level 3               Level 2               Level 1
+
+ Clinical         20 points               15 points             10 points             5 points
+ grounding          Clear connection       Good connection       Loose connection      Little or no
+
+
+ 20
+                    to the patient's       to the case           to the case           connection to the
+                    findings, abilities    Some design           Could apply to        case
+                    and priorities         choices not tied      any patient with
+                    Design choices         to it                 this condition
+                    follow from the
+                    case
+
+ Diagnostic       30 points               22 points             15 points             8 points
+ value              Clear explanation      Good explanation      Adequate              Unclear what is
+
+
+ 30
+                    of what is             of what is            explanation of        detected or why it
+                    detected and why       detected              what is detected      matters
+                    it matters             Advantage over        Advantage over
+                    Clear advantage        current practice      current practice
+                    over current           stated with minor     unclear
+                    practice               gaps
+
+ Evidence and     20 points               15 points             10 points             5 points
+ testing            Strong reasoning       Good reasoning        Reasoning             No clear
+
+
+ 20
+                    for why it works,      with some             present but little    reasoning or
+                    supported by           supporting            evidence              evidence
+                    data,                  evidence              Testing               No testing
+                    measurements or        Good testing plan     mentioned but         considered
+                    a prototype            with minor gaps       not developed
+                    Clear plan for how
+                    the method would
+                    be tested and
+                    accuracy
+                    measured
+
+ Feasibility      15 points               11 points             8 points              4 points
+
+
+ 15
+                    Clear and realistic    Good                  Practical barriers    Practical barriers
+                    path to use, with      consideration of      acknowledged          missing or
+                    cost, access and       practical barriers    but not addressed     ignored
+                    regulation             with minor gaps
+                    considered
+
+ Communication 15 points                  11 points             8 points              4 points
+
+
+ 15
+                    Clear, organised       Clear overall with    Hard to follow in     Unclear or
+                    and concise            minor issues          places                disorganised
+                    Questions              Most questions        Questions partly      Questions not
+                    answered well          answered              answered              answered
+
+
+Judges score each project out of 100 with this rubric, then name the best, second
+best and third best project they saw in the track. The rankings from all judges
+determine which two teams win in each track.
+
+BioHacks 2026                                                                                               20
+Judging rubric
+Therapeutics and Delivery
+ Criterion        Level 4                 Level 3               Level 2               Level 1
+
+ Clinical         20 points               15 points             10 points             5 points
+ grounding          Clear connection       Good connection       Loose connection      Little or no
+
+
+ 20
+                    to the patient's       to the case           to the case           connection to the
+                    findings, abilities    Some design           Could apply to        case
+                    and priorities         choices not tied      any patient with
+                    Design choices         to it                 this condition
+                    follow from the
+                    case
+
+ Mechanism        30 points               22 points             15 points             8 points
+ and rationale      Clear and well         Good explanation      Mechanism             Mechanism
+
+
+ 30
+                    supported              of the mechanism      stated but weakly     unclear or
+                    explanation of         with minor gaps       explained or          missing
+                    how the                or light support      supported
+                    treatment acts on
+                    the condition
+                    Scientifically
+                    sound
+
+ Reaching the     20 points               15 points             10 points             5 points
+ patient           Clear explanation        Good explanation      Delivery or risks     Delivery and risks
+
+
+ 20
+                   of how the               of delivery           mentioned but         not considered
+                   treatment                Risks identified      not developed
+                   reaches where it         with minor gaps
+                   acts
+                   Main risks
+                   identified and
+                   addressed
+
+ Feasibility      15 points               11 points             8 points              4 points
+
+
+ 15
+                    Clear and realistic    Good                  Practical barriers    Practical barriers
+                    path to use, with      consideration of      acknowledged          missing or
+                    cost, access and       practical barriers    but not addressed     ignored
+                    regulation             with minor gaps
+                    considered
+
+ Communication 15 points                  11 points             8 points              4 points
+
+
+ 15
+                    Clear, organised       Clear overall with    Hard to follow in     Unclear or
+                    and concise            minor issues          places                disorganised
+                    Questions              Most questions        Questions partly      Questions not
+                    answered well          answered              answered              answered
+
+
+Judges score each project out of 100 with this rubric, then name the best, second
+best and third best project they saw in the track. The rankings from all judges
+determine which two teams win in each track.
+
+
+
+BioHacks 2026                                                                                                21
+Judging rubric
+Wearable Devices and Quality of Life
+ Criterion        Level 4                Level 3               Level 2               Level 1
+
+ Clinical         20 points              15 points             10 points             5 points
+ grounding         Clear connection       Good connection       Loose connection      Little or no
+
+
+ 20
+                   to the patient's       to the case           to the case           connection to the
+                   findings, abilities    Some design           Could apply to        case
+                   and priorities         choices not tied      any patient with
+                   Design choices         to it                 this condition
+                   follow from the
+                   case
+
+ Design and       30 points              22 points             15 points             8 points
+ function          Clear and              Good design with      Partial design or     Unclear what the
+
+
+ 30
+                   complete design        minor gaps            unclear function      device does
+                   that does what it      Limited
+                   claims                 demonstration
+                   Supported by a
+                   prototype, model
+                   or demonstration
+
+ Usability in     20 points              15 points             10 points             5 points
+ daily life        Comfortable and        Usable day to day     Usable only in        Impractical for
+
+
+ 20
+                   low effort for the     Adapts to some        ideal conditions      daily use
+                   patient                progression of the
+                   Adapts as the          condition
+                   condition
+                   progresses
+
+ Feasibility      15 points              11 points             8 points              4 points
+
+
+ 15
+                   Clear and realistic    Good                  Practical barriers    Practical barriers
+                   path to use, with      consideration of      acknowledged          missing or
+                   cost, access and       practical barriers    but not addressed     ignored
+                   regulation             with minor gaps
+                   considered
+
+ Communication 15 points                 11 points             8 points              4 points
+
+
+ 15
+                   Clear, organised       Clear overall with    Hard to follow in     Unclear or
+                   and concise            minor issues          places                disorganised
+                   Questions              Most questions        Questions partly      Questions not
+                   answered well          answered              answered              answered
+
+
+Judges score each project out of 100 with this rubric, then name the best, second
+best and third best project they saw in the track. The rankings from all judges
+determine which two teams win in each track.
+
+
+
+
+BioHacks 2026                                                                                              22
+Prizes
+$1,000
+First place
+
+
+
+
+in prizes for the top team overall
+
+Each track has two winning teams. Track winners receive cash
+prizes, with amounts announced on Sunday.
+
+External sponsor prizes
+These prizes sit outside the three tracks. A team can win any of them alongside its track
+result. Opt in on Devpost.
+
+
+
+
+  Best 3D Print              Best Use of          Best Use of Gemini        Best Use of Entire
+                             ElevenLabs           API
+                             Wireless                                       Mini portable
+  Filament                   earbuds              MLH swag kits             projector
+
+
+
+
+  Best Use of Solana         Best Use of Tiger    Best Use of Vultr         Best Domain Name
+  Unruggable                 Data                                           from GoDaddy
+                                                                            Registry
+  hardware                   Stream Deck
+  wallets                    Mini                 Assorted prizes           Digital gift card
+
+
+
+                        Best vlog                 Workshop raffle
+                        $100 Amazon gift          1 year of NordVPN, NordPass and
+                                                  Incogni, plus Saily eSIM data
+                        card
+
+  Vlog your weekend at BioHacks, post it on
+  Instagram and tag @_biohacks, then drop         Attend three of the four workshops and both
+  the link in the vlogs channel on the Discord.   guest lectures to enter. Six winners are drawn
+  The best vlog wins.                             at the closing ceremony.
+
+
+BioHacks 2026                                                                                      23
+Hosts, partners and sponsors
+Hosts
+
+            BioHacks           iBioMed Society
+
+
+
+Partner
+
+
+
+
+Headline sponsors
+
+
+
+
+Sponsors
+
+
+
+
+MLH partners
+
+
+
+
+BioHacks 2026                                    24
+
