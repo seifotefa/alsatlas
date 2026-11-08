@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useState, type FormEvent, type ReactNode } from 'react';
 import Activity from 'lucide-react/dist/esm/icons/activity';
 import ArrowUpRight from 'lucide-react/dist/esm/icons/arrow-up-right';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
@@ -20,7 +20,7 @@ export function LandingPage({ page, go }: { page: Page; go: Go }) {
     <SiteNav page={page} go={go}/>
     {page === 'home' && <Home go={go}/>}
     {page === 'product' && <Product go={go}/>}
-    {page === 'diagnosis' && <Diagnosis go={go}/>}
+    {page === 'diagnosis' && <Diagnosis/>}
     {page === 'research' && <ResearchLanding go={go}/>}
   </div>;
 }
@@ -114,53 +114,145 @@ function Product({ go }: { go: Go }) {
   </main>;
 }
 
-function Diagnosis({ go }: { go: Go }) {
+const referralGroups = [
+  ['Course', [
+    ['progression', 'Getting worse over time, in one area or spreading'],
+    ['asymmetry', 'Worse on one side than the other'],
+  ]],
+  ['Breathing', [
+    ['breathExertion', 'Shortness of breath with exertion or daily activities'],
+    ['orthopnea', 'Shortness of breath when lying down'],
+  ]],
+  ['Upper body', [
+    ['handwriting', 'Handwriting has become harder'],
+    ['lifting', 'Difficulty lifting, reaching, or carrying'],
+    ['everydayTasks', 'Everyday tasks are harder: food, keys, jars, starting the car, coins'],
+    ['dressing', 'Dressing or hygiene is harder: buttons, fingernails'],
+  ]],
+  ['Lower body', [
+    ['tripping', 'Frequent tripping'],
+    ['stairs', 'Difficulty on stairs, getting out of a chair, or standing on toes'],
+    ['footDrag', 'The foot drags, or walking distance has fallen'],
+  ]],
+  ['Head and neck', [
+    ['emotionalLability', 'Emotional outbursts that are hard to control'],
+    ['slurredSpeech', 'Slurred speech'],
+    ['swallowing', 'Difficulty swallowing'],
+    ['excessSaliva', 'Excess saliva'],
+  ]],
+  ['Also listed on the tool', [
+    ['cognitiveSymptoms', 'Thinking or behavior changes, along with weakness or trouble walking'],
+    ['motorNeuronSigns', 'A clinician has found upper or lower motor neuron signs'],
+    ['failureToThrive', 'Unexplained loss of weight, strength, or day-to-day function'],
+    ['patientSuspectsAls', 'This person suspects ALS'],
+  ]],
+  ['Pain and feeling', [
+    ['pain', 'Pain along with the weakness'],
+    ['sensoryLoss', 'Numbness or loss of feeling'],
+  ]],
+] as const;
+
+type ReferralKey = (typeof referralGroups)[number][1][number][0];
+type Tri = 'yes' | 'no' | 'unknown';
+type ReferralReview = {
+  matchedImmediateIndicators?: { label: string }[];
+  matchedConsiderIndicators?: { label: string }[];
+  partiallyDocumentedIndicators?: { label: string }[];
+  clinicianReviewRequired?: { label: string }[];
+  reportedChanges?: string[];
+  cautions?: string[];
+};
+
+function referralVerdict(review: ReferralReview) {
+  const immediate = review.matchedImmediateIndicators ?? [];
+  const needsReview = review.clinicianReviewRequired ?? [];
+  const consider = review.matchedConsiderIndicators ?? [];
+  const partial = review.partiallyDocumentedIndicators ?? [];
+  const reported = review.reportedChanges ?? [];
+  const cautions = review.cautions ?? [];
+  const caution = cautions.length ? ` Also reported: ${cautions.join('; ')}. The tool notes that pain and sensory loss can point toward other explanations, such as a nerve compression.` : '';
+  if (immediate.length || needsReview.length) return {
+    title: 'See a doctor',
+    copy: `These answers match the ReferALS reasons to refer. This is not a diagnosis.${caution}`,
+    items: [...new Set([...immediate, ...needsReview].map(item => item.label).concat(reported))],
+  };
+  if (consider.length || partial.length || reported.length) return {
+    title: 'Talk with a doctor',
+    copy: `A clinician should review these changes. This does not confirm or rule out ALS.${caution}`,
+    items: reported.length ? reported : [...consider, ...partial].map(item => item.label),
+  };
+  return {
+    title: 'No referral from these answers',
+    copy: `Nothing reported here matches a ReferALS indicator. A doctor can still look if something is changing. This is not a rule-out.${caution}`,
+    items: cautions,
+  };
+}
+
+function ReferralSurvey() {
+  const [answers, setAnswers] = useState<Partial<Record<ReferralKey, Tri>>>({});
+  const [review, setReview] = useState<ReferralReview | null>(null);
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+  const ready = referralGroups.every(([, questions]) => questions.every(([key]) => answers[key]));
+  const verdict = review ? referralVerdict(review) : null;
+
+  const submit = async (event: FormEvent) => {
+    event.preventDefault();
+    if (!ready) return;
+    setBusy(true);
+    setError('');
+    try {
+      const response = await fetch('/api/referals/evaluate', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ intake: answers }),
+      });
+      if (!response.ok) throw new Error();
+      setReview(await response.json());
+    } catch {
+      setError('The referral check could not be completed. Try again.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return <section className="referral-tool" aria-label="Referral survey">
+    <form onSubmit={submit}>
+      {referralGroups.map(([group, questions]) => <div className="referral-group" key={group}>
+        <h3>{group}</h3>
+        {questions.map(([key, label]) => <fieldset key={key}>
+          <legend>{label}</legend>
+          <div className="tri" role="radiogroup" aria-label={label}>
+            {([['yes', 'Yes'], ['no', 'No'], ['unknown', 'Not sure']] as const).map(([value, text]) =>
+              <button key={value} type="button" role="radio" aria-checked={answers[key] === value} className={answers[key] === value ? 'on' : ''} onClick={() => { setAnswers(current => ({ ...current, [key]: value })); setReview(null); }}>{text}</button>)}
+          </div>
+        </fieldset>)}
+      </div>)}
+      {error && <p className="referral-error" role="alert">{error}</p>}
+      <button className="pill dark" type="submit" disabled={!ready || busy}>{busy ? 'Checking…' : 'Check referral'}</button>
+    </form>
+    <aside className="referral-result" aria-live="polite">
+      {verdict ? <>
+        <h2>{verdict.title}</h2>
+        <p>{verdict.copy}</p>
+        {verdict.items.length > 0 && <ul>{verdict.items.map(item => <li key={item}>{item}</li>)}</ul>}
+      </> : <>
+        <h2>Should this person see a doctor?</h2>
+        <p>Answer each item from the ReferALS symptom list. The result says whether to refer.</p>
+      </>}
+      <p className="referral-safety">Severe breathing trouble, choking, or sudden weakness needs urgent care.</p>
+    </aside>
+  </section>;
+}
+
+function Diagnosis() {
   return <main className="subpage">
     <header className="page-lead">
-      <p className="kicker">Diagnosis</p>
-      <h1>A clearer first conversation</h1>
-      <p>The intake organizes what someone has noticed. It does not diagnose ALS. A clinician still decides what the summary means.</p>
+      <p className="kicker">Referral</p>
+      <h1>Should they see a doctor?</h1>
+      <p>For someone who suspects a problem, or for a patient already being followed. The questions are the symptom list in the <a href="https://als.ca/wp-content/uploads/2024/05/ReferALS-Early-Referral-Tool.pdf" target="_blank" rel="noreferrer">ALS Canada ReferALS Early Referral Tool</a>. The result is whether to refer. It does not diagnose ALS.</p>
     </header>
-    <ol className="intake">
-      <li>
-        <span>01</span>
-        <div>
-          <h2>When and where it started</h2>
-          <p>Onset, body region, and laterality. The same opening a referral conversation usually needs.</p>
-        </div>
-        <div className="slice form">
-          <label>Approximate onset<b>March 2025</b></label>
-          <label>Body region<b>Upper body</b></label>
-          <label>Laterality<b>Right</b></label>
-        </div>
-      </li>
-      <li>
-        <span>02</span>
-        <div>
-          <h2>Which changes are present</h2>
-          <p>Weakness, walking, speech, and swallowing stay labeled as patient-reported until a clinician confirms them.</p>
-        </div>
-        <div className="slice choices">
-          <div className="picked">Progressive muscle weakness</div>
-          <div className="picked">Walking, stairs, or falls</div>
-          <div>Speech changes</div>
-          <div>Swallowing changes</div>
-        </div>
-      </li>
-      <li>
-        <span>03</span>
-        <div>
-          <h2>A summary you can hand over</h2>
-          <p>The result is a conversation starter and a PDF. Nothing in it is a probability, a rule-out, or a diagnosis.</p>
-        </div>
-        <div className="slice report">
-          <FileText size={16} strokeWidth={1.5}/>
-          <div><b>Clinician summary</b><small>Upper body · right side · progressing</small></div>
-          <em>PDF</em>
-        </div>
-      </li>
-    </ol>
-    <DashboardLink label="Open diagnosis intake" onClick={() => go('survey')}/>
+    <ReferralSurvey/>
   </main>;
 }
 

@@ -85,6 +85,28 @@
 .slice.people span{display:grid}
 .slice.people small,.slice.form small,.slice.report small{color:#6b7487}
 .slice.people em{font-style:normal;font-size:12px;color:#4b5565}
+.referral-tool{margin-top:28px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.referral-tool form,.referral-result{background:#fff;border:1px solid #eceff3;border-radius:18px;padding:8px 20px 20px}
+.referral-result{position:sticky;top:24px}
+.referral-group h3{margin:18px 0 0;font-size:13px;font-weight:500;color:#6b7487}
+.referral-group:first-child h3{margin-top:12px}
+.page-lead a{color:#1d4ed8}
+.referral-tool fieldset{margin:0;padding:16px 0;border:0;border-top:1px solid #eceff3;display:grid;gap:10px}
+.referral-tool fieldset:first-of-type{border-top:0}
+.referral-tool legend{padding:0;font-size:15px;font-weight:500}
+.tri{display:flex;gap:8px}
+.tri button{height:36px;padding:0 14px;border-radius:8px;border:1px solid rgba(17,24,39,.08);background:#fff;font-size:14px;font-weight:500;color:#4b5565;cursor:pointer}
+.tri button.on{background:#111827;color:#fff;border-color:#111827}
+.tri button:focus-visible{outline:2px solid #1d4ed8;outline-offset:2px}
+.referral-tool form .pill{margin-top:8px}
+.referral-tool form .pill:disabled{opacity:.45;cursor:default}
+.referral-error{margin:0 0 12px;color:#9f1239;font-size:14px}
+.referral-result{padding-top:20px}
+.referral-result h2{margin:0;font-size:28px;font-weight:500;letter-spacing:-.02em}
+.referral-result p{margin:12px 0 0;color:#4b5565;line-height:1.55}
+.referral-result ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.referral-result li{padding-top:8px;border-top:1px solid #eceff3;font-size:14px}
+.referral-safety{font-size:13px;color:#6b7487}
 .intake{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:0}
 .intake li{display:grid;grid-template-columns:48px 1fr .9fr;gap:24px;align-items:center;padding:36px 0;border-top:1px solid #eceff3}
 .intake li>span{color:#6b7487;font-weight:500;font-variant-numeric:tabular-nums}
@@ -145,6 +167,6 @@
   .mac-screen{height:auto}
   .device-screen{grid-template-columns:1fr}
   .device-screen aside{display:none}
-  .device-metrics,.feature,.feature.flip,.intake li,.flow,.offers,.slice.metrics{grid-template-columns:1fr}
+  .device-metrics,.feature,.feature.flip,.referral-tool,.intake li,.flow,.offers,.slice.metrics{grid-template-columns:1fr}
   .feature.flip>div:first-child{order:0}
 }
