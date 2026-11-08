@@ -1,0 +1,216 @@
+{
+  "checkins": [
+    {
+      "id": "seed-checkin-1",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-26T02:41:46.081Z",
+      "energy": 3,
+      "note": "Walking steady",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-2",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-27T02:41:46.081Z",
+      "energy": 3,
+      "note": "Speech a little softer after lunch",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-3",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-28T02:41:46.081Z",
+      "energy": 2,
+      "note": "Energy lower after 4 PM",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-4",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-29T02:41:46.081Z",
+      "energy": 3,
+      "note": "No new concerns",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-5",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-30T02:41:46.081Z",
+      "energy": 2,
+      "note": "Needed one rest break",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-6",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-31T02:41:46.081Z",
+      "energy": 2,
+      "note": "Caregiver observed slower stairs",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-7",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-01T02:41:46.081Z",
+      "energy": 3,
+      "note": "Voice sample captured",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-8",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-02T02:41:46.081Z",
+      "energy": 3,
+      "note": "About usual",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-9",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-03T02:41:46.081Z",
+      "energy": 2,
+      "note": "Foot drag noted once",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-10",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-04T02:41:46.081Z",
+      "energy": 3,
+      "note": "No new concerns",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-11",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-05T02:41:46.081Z",
+      "energy": 2,
+      "note": "Good morning energy",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-12",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-06T02:41:46.081Z",
+      "energy": 2,
+      "note": "Swallowing question to discuss",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-13",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-07T02:41:46.081Z",
+      "energy": 3,
+      "note": "About usual",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-14",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:41:46.081Z",
+      "energy": 3,
+      "note": "Ready for review",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "test-restart",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:41:59.692Z",
+      "energy": 2,
+      "note": "test"
+    },
+    {
+      "id": "test-restart",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:47:54.864Z",
+      "energy": 2,
+      "note": "test"
+    },
+    {
+      "id": "test-restart",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T05:07:09.157Z",
+      "energy": 2,
+      "note": "test"
+    },
+    {
+      "id": "test-restart",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T05:15:10.937Z",
+      "energy": 2,
+      "note": "test"
+    },
+    {
+      "id": "test-restart",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T06:08:07.957Z",
+      "energy": 2,
+      "note": "test"
+    }
+  ],
+  "media": [],
+  "referrals": [],
+  "consent": {
+    "patientId": "demo-alex-chen",
+    "enabled": false,
+    "categories": {
+      "questions": false,
+      "movement": false,
+      "voice": false
+    },
+    "updatedAt": "2026-11-08T02:41:46.049Z"
+  },
+  "members": [
+    {
+      "id": "m1",
+      "name": "Jordan Chen",
+      "role": "Primary caregiver",
+      "access": "Full care access",
+      "initials": "JC"
+    },
+    {
+      "id": "m2",
+      "name": "Maya Chen",
+      "role": "Family member",
+      "access": "Updates & appointments",
+      "initials": "MC"
+    },
+    {
+      "id": "m3",
+      "name": "Dr. Priya Raman",
+      "role": "Physician",
+      "access": "Clinical summary",
+      "initials": "PR"
+    }
+  ],
+  "observations": [],
+  "consultations": []
+}

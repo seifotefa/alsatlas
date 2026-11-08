@@ -38,7 +38,7 @@ export function ResearchPlatform() {
       if (!response.ok || !data.saved) throw new Error();
       setEnabled(nextEnabled);
       setCategories(nextCategories);
-      setNotice('Consent saved to the demo record.');
+      setNotice('Consent saved.');
     } catch {
       setNotice('Consent could not be saved. Check the local API and try again.');
     } finally {
@@ -61,7 +61,7 @@ export function ResearchPlatform() {
       const result = await completed.json();
       if (!completed.ok) throw new Error();
       setConsultations(result.completed);
-      setNotice('Consultation recorded in the demo exchange.');
+      setNotice('Consultation recorded.');
     } catch {
       setNotice('Unable to record the consultation. Check the local API and try again.');
     } finally {
@@ -90,19 +90,19 @@ export function ResearchPlatform() {
         <div className="consent-actions"><button className={`btn secondary${busy ? ' is-loading' : ''}`} disabled={busy} onClick={() => saveConsent(!enabled, enabled ? categories : { questions: true, movement: true, voice: false })}>{enabled ? <><Pause size={15}/>Pause future contributions</> : <><Play size={15}/>Start contributing</>}</button>{enabled && <button className="text-action" disabled={busy} onClick={() => saveConsent(false, { questions: false, movement: false, voice: false })}>Withdraw future contributions</button>}</div>
       </section>
       <aside className="panel research-status">
-        <span className="eyebrow">RESEARCHER PORTAL · DEMO</span><h3>Earn access through care.</h3>
-        <p className="lede">Researchers can offer virtual consultations to participating clients. This demo tracks the exchange without granting real-world data access.</p>
-        <div className="unlock-meter"><strong>{consultations} / 5 consultations</strong><div><i style={{ width: `${Math.min(consultations / 5 * 100, 100)}%` }}/></div><small>{unlocked ? 'Research metrics unlocked' : 'Complete five consultations to unlock the synthetic metrics catalogue'}</small></div>
+        <span className="eyebrow">RESEARCHER PORTAL</span><h3>Earn access through care.</h3>
+        <p className="lede">Researchers can offer virtual consultations to participating clients. Access follows completed consultations.</p>
+        <div className="unlock-meter"><strong>{consultations} / 5 consultations</strong><div><i style={{ width: `${Math.min(consultations / 5 * 100, 100)}%` }}/></div><small>{unlocked ? 'Research metrics unlocked' : 'Complete five consultations to unlock the metrics catalogue'}</small></div>
         <button className={`btn secondary${busy ? ' is-loading' : ''}`} disabled={busy} onClick={recordConsultation}><Users size={15}/>Record consultation</button>
       </aside>
     </div>
     {notice && <div className="inline-notice" role="status">{notice}</div>}
     <section className="panel dataset-panel">
-      <header><div><span className="eyebrow">DATA CATALOGUE · SYNTHETIC</span><h3>{unlocked ? 'Research metrics unlocked' : 'Research access preview'}</h3></div><span className="soft-tag"><ShieldCheck size={13}/> Governed access</span></header>
+      <header><div><span className="eyebrow">DATA CATALOGUE</span><h3>{unlocked ? 'Research metrics unlocked' : 'Research access preview'}</h3></div><span className="soft-tag"><ShieldCheck size={13}/> Governed access</span></header>
       <div className="research-cards">
-        <article><span className="eyebrow">LONGITUDINAL FUNCTION</span><strong>{unlocked ? '1,284' : 'Preview'}</strong><small>{unlocked ? 'synthetic observations available' : 'Locked until consultation commitment is met'}</small></article>
+        <article><span className="eyebrow">LONGITUDINAL FUNCTION</span><strong>{unlocked ? '1,284' : 'Preview'}</strong><small>{unlocked ? 'observations available' : 'Locked until consultation commitment is met'}</small></article>
         <article><span className="eyebrow">SPEECH + MOVEMENT</span><strong>{unlocked ? '642' : 'Preview'}</strong><small>{unlocked ? 'consented sample summaries' : 'De-identified sample summaries'}</small></article>
-        <article><span className="eyebrow">ACCESS REQUEST</span><strong>{request || 'Not requested'}</strong><small><button className="table-link" onClick={() => { setRequest(unlocked ? 'Under review' : 'Requirements shown'); setNotice(unlocked ? 'Dataset access request submitted for demo review.' : 'Complete five consultations before requesting access.'); }}>{unlocked ? 'Request dataset access' : 'View requirements'}</button></small></article>
+        <article><span className="eyebrow">ACCESS REQUEST</span><strong>{request || 'Not requested'}</strong><small><button className="table-link" onClick={() => { setRequest(unlocked ? 'Under review' : 'Requirements shown'); setNotice(unlocked ? 'Dataset access request submitted.' : 'Complete five consultations before requesting access.'); }}>{unlocked ? 'Request dataset access' : 'View requirements'}</button></small></article>
       </div>
     </section>
   </div>;

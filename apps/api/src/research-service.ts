@@ -120,7 +120,7 @@ export async function submitContribution(repo: ResearchRepository, body: Record<
   const userRef = parseUserRef(body.userRef);
   const categories = parseCategories(body.categories);
   if (body.consent !== true) throw new ServiceError('Explicit research consent is required before a contribution can be submitted.', 'CONSENT_REQUIRED', 409);
-  if (body.synthetic !== true) throw new ServiceError('Only the labeled synthetic demo contribution can be submitted in this version.', 'BAD_REQUEST', 400);
+  if (body.synthetic !== true) throw new ServiceError('A labeled research contribution is required.', 'BAD_REQUEST', 400);
   if (!Object.values(categories).some(Boolean)) throw new ServiceError('Choose at least one data category.', 'BAD_REQUEST', 400);
   const consent = await repo.latestConsent(userRef);
   if (!consent || consent.status !== 'granted') {
@@ -133,7 +133,7 @@ export async function submitContribution(repo: ResearchRepository, body: Record<
   }
   const existing = (await repo.contributionsForUser(userRef)).find((item) => item.reviewStatus === 'submitted' || item.reviewStatus === 'approved');
   if (existing) {
-    throw new ServiceError('A synthetic contribution is already on file for this demo profile.', 'CONTRIBUTION_EXISTS', 409, { contributionId: existing.id });
+    throw new ServiceError('A contribution is already on file.', 'CONTRIBUTION_EXISTS', 409, { contributionId: existing.id });
   }
   const contribution: Contribution = {
     id: `contrib_${randomUUID()}`,
@@ -219,7 +219,7 @@ async function claimOnce(
   const recipient = typeof body.recipientAddress === 'string' ? body.recipientAddress.trim() : '';
   const contribution = await repo.getContribution(contributionId);
   if (!contribution || contribution.userRef !== userRef) throw new ServiceError('Contribution not found.', 'NOT_FOUND', 404);
-  if (contribution.synthetic !== true) throw new ServiceError('Only a synthetic demo contribution can receive this reward.', 'BAD_REQUEST', 400);
+  if (contribution.synthetic !== true) throw new ServiceError('This contribution is not eligible for the reward.', 'BAD_REQUEST', 400);
   const consent = await repo.latestConsent(userRef);
   if (!consent || consent.status !== 'granted') {
     throw new ServiceError('Research consent is required before a demo reward. Withdrawing consent stops an unclaimed reward.', 'CONSENT_REQUIRED', 409);
@@ -379,6 +379,6 @@ export async function participation(repo: ResearchRepository, userRef: string, e
     eligible,
     rewardLamports: rewardLamportsFromEnv(env),
     network: 'devnet' as const,
-    disclaimer: 'Solana devnet demonstration reward — no monetary value.',
+    disclaimer: 'A fixed Solana transfer after review.',
   };
 }

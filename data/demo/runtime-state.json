@@ -1,0 +1,301 @@
+{
+  "checkins": [
+    {
+      "id": "seed-checkin-1",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-26T02:48:09.221Z",
+      "energy": 3,
+      "note": "Walking steady",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-2",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-27T02:48:09.221Z",
+      "energy": 3,
+      "note": "Speech a little softer after lunch",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-3",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-28T02:48:09.221Z",
+      "energy": 2,
+      "note": "Energy lower after 4 PM",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-4",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-29T02:48:09.221Z",
+      "energy": 3,
+      "note": "No new concerns",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-5",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-30T02:48:09.221Z",
+      "energy": 2,
+      "note": "Needed one rest break",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-6",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-10-31T02:48:09.221Z",
+      "energy": 2,
+      "note": "Caregiver observed slower stairs",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-7",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-01T02:48:09.221Z",
+      "energy": 3,
+      "note": "Voice sample captured",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-8",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-02T02:48:09.221Z",
+      "energy": 3,
+      "note": "About usual",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-9",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-03T02:48:09.221Z",
+      "energy": 2,
+      "note": "Foot drag noted once",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-10",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-04T02:48:09.221Z",
+      "energy": 3,
+      "note": "No new concerns",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-11",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-05T02:48:09.221Z",
+      "energy": 2,
+      "note": "Good morning energy",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-12",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-06T02:48:09.221Z",
+      "energy": 2,
+      "note": "Swallowing question to discuss",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-13",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-07T02:48:09.221Z",
+      "energy": 3,
+      "note": "About usual",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "seed-checkin-14",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:48:09.221Z",
+      "energy": 3,
+      "note": "Ready for review",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "synthetic": true
+    },
+    {
+      "id": "checkin-1794106151856",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:49:11.856Z",
+      "energy": 2,
+      "note": "No functional changes selected. No safety events selected",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "responses": {
+        "energy": "About usual",
+        "changes": [],
+        "events": []
+      }
+    },
+    {
+      "id": "checkin-1794114470987",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T05:07:50.987Z",
+      "energy": 1,
+      "note": "I was feeling a little dizzy yesterday and my right arm did not feel it as much",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "responses": {
+        "energy": "Lower than usual",
+        "changes": [
+          "Dizziness",
+          "Right arm"
+        ],
+        "events": [],
+        "channel": "voice"
+      }
+    },
+    {
+      "id": "checkin-1794117308277",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T05:55:08.277Z",
+      "energy": 2,
+      "note": "Hey, how's it going? Um, today was a little bit, um, more tiring",
+      "breathingAtRest": false,
+      "researchConsent": false,
+      "responses": {
+        "energy": "About usual",
+        "changes": [],
+        "events": [],
+        "channel": "elevenlabs"
+      }
+    }
+  ],
+  "media": [
+    {
+      "id": "media-1794106150845",
+      "patientId": "demo-alex-chen",
+      "kind": "movement",
+      "createdAt": "2026-11-08T02:49:10.845Z",
+      "bytes": 4235
+    },
+    {
+      "id": "audio-1794106151247",
+      "patientId": "demo-alex-chen",
+      "kind": "voice-checkin",
+      "createdAt": "2026-11-08T02:49:11.247Z",
+      "bytes": 82
+    }
+  ],
+  "referrals": [
+    {
+      "id": "ref-1794106143185",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:49:03.185Z",
+      "type": "ReferALS-support",
+      "summary": "Patient-reported changes for clinician review.",
+      "status": "draft"
+    },
+    {
+      "id": "ref-1794106160540",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T02:49:20.540Z",
+      "type": "specialist",
+      "summary": "Progressive movement and speech changes reported for clinician review.",
+      "status": "draft"
+    },
+    {
+      "id": "ref-1794117982774",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T06:06:22.774Z",
+      "type": "specialist",
+      "summary": "Progressive movement and speech changes reported for clinician review.",
+      "status": "draft"
+    },
+    {
+      "id": "ref-1794117983816",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T06:06:23.816Z",
+      "type": "specialist",
+      "summary": "Progressive movement and speech changes reported for clinician review.",
+      "status": "draft"
+    }
+  ],
+  "consent": {
+    "patientId": "demo-alex-chen",
+    "enabled": true,
+    "categories": {
+      "questions": true,
+      "movement": true,
+      "voice": true
+    },
+    "updatedAt": "2026-11-08T06:06:02.647Z"
+  },
+  "members": [
+    {
+      "id": "m1",
+      "name": "Jordan Chen",
+      "role": "Primary caregiver",
+      "access": "Full care access",
+      "initials": "JC"
+    },
+    {
+      "id": "m2",
+      "name": "Maya Chen",
+      "role": "Family member",
+      "access": "Full care access",
+      "initials": "MC"
+    },
+    {
+      "id": "m3",
+      "name": "Dr. Priya Raman",
+      "role": "Physician",
+      "access": "Clinical summary",
+      "initials": "PR"
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-1794106151856",
+      "patientId": "demo-alex-chen",
+      "observedAt": "2026-11-08T02:49:11.856Z",
+      "type": "caregiver-checkin",
+      "value": 2,
+      "unit": "energy-1-3",
+      "note": "No functional changes selected. No safety events selected",
+      "source": "caregiver",
+      "status": "recorded"
+    }
+  ],
+  "consultations": [
+    {
+      "id": "consult-1794106234880",
+      "researcherId": "researcher-1794106234279",
+      "patientId": "demo-alex-chen",
+      "scheduledAt": "2026-11-08T02:50:34.880Z",
+      "status": "completed",
+      "topic": "Synthetic care consultation",
+      "durationMinutes": 60,
+      "accessCredits": 1,
+      "synthetic": true,
+      "completedAt": "2026-11-08T02:50:34.886Z"
+    }
+  ]
+}

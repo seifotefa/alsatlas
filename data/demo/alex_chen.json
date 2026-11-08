@@ -14,7 +14,19 @@
     "handedness": "right",
     "occupation": "senior biology teacher",
     "location": "Hamilton, Ontario",
-    "household": {"partner": "Jordan", "children": [{"name": "Maya", "age": 16}, {"name": "Leo", "age": 14}]}
+    "household": {
+      "partner": "Jordan",
+      "children": [
+        {
+          "name": "Maya",
+          "age": 16
+        },
+        {
+          "name": "Leo",
+          "age": 14
+        }
+      ]
+    }
   },
   "diagnosis": {
     "date": "2026-07-14",
@@ -22,55 +34,863 @@
     "phenotype": "limb onset with early bulbar and respiratory involvement",
     "criteria_statement": "Clinical letter states that Gold Coast criteria were met.",
     "genetic_panel": "No pathogenic variant detected",
-    "medication_at_2026_09_22": ["riluzole 50 mg twice daily"],
+    "medication_at_2026_09_22": [
+      "riluzole 50 mg twice daily"
+    ],
     "edaravone_status": "declined for now"
   },
   "timeline": [
-    {"date": "2024-06", "event": "symptom_onset", "details": ["right-hand weakness", "deteriorating handwriting", "right thumb and index-finger fatigue"]},
-    {"date": "2024-10-14", "event": "family_physician_referral", "details": ["suspected carpal tunnel syndrome or median neuropathy", "no pain or sensory symptoms"]},
-    {"date": "2024-12-09", "event": "hand_surgery_consultation", "details": ["wrist nerve conduction normal", "right thenar and first-interosseous wasting", "right grip 4/5"]},
-    {"date": "2025-01-20", "event": "procedure", "details": ["right carpal tunnel release", "no subsequent benefit"]},
-    {"date": "2025-04-21", "event": "surgical_follow_up", "details": ["right hand weaker", "forearm fasciculations", "right foot catching on stairs"]},
-    {"date": "2025-05", "event": "mobility_change", "details": ["stopped running because right leg felt heavy"]},
-    {"date": "2025-08-12/2026-02-05", "event": "physiotherapy", "details": ["18 sessions", "right ankle dorsiflexion declined from 4/5 to 3/5", "right calf and thigh about 2 cm smaller", "two falls", "began using cane outside"]},
-    {"date": "2026-02-16", "event": "urgent_neurology_referral", "details": ["progressive painless weakness", "muscle cramps", "fasciculations", "weight loss", "brisk reflexes"]},
-    {"date": "2026-06-11", "event": "neuromuscular_consultation", "details": ["upper- and lower-motor-neuron signs", "bulbar symptoms", "orthopnea", "normal sensation"]},
-    {"date": "2026-06-18", "event": "electrodiagnostic_testing", "details": ["widespread active denervation and chronic reinnervation in four body regions", "normal sensory conduction", "no conduction block"]},
-    {"date": "2026-07-14", "event": "als_diagnosis", "details": ["limb onset", "early bulbar involvement", "early respiratory involvement"]},
-    {"date": "2026-09-22", "event": "first_multidisciplinary_als_clinic_visit", "details": ["27 months from first symptom", "10 weeks from diagnosis"]}
+    {
+      "date": "2024-06",
+      "event": "symptom_onset",
+      "details": [
+        "right-hand weakness",
+        "deteriorating handwriting",
+        "right thumb and index-finger fatigue"
+      ]
+    },
+    {
+      "date": "2024-10-14",
+      "event": "family_physician_referral",
+      "details": [
+        "suspected carpal tunnel syndrome or median neuropathy",
+        "no pain or sensory symptoms"
+      ]
+    },
+    {
+      "date": "2024-12-09",
+      "event": "hand_surgery_consultation",
+      "details": [
+        "wrist nerve conduction normal",
+        "right thenar and first-interosseous wasting",
+        "right grip 4/5"
+      ]
+    },
+    {
+      "date": "2025-01-20",
+      "event": "procedure",
+      "details": [
+        "right carpal tunnel release",
+        "no subsequent benefit"
+      ]
+    },
+    {
+      "date": "2025-04-21",
+      "event": "surgical_follow_up",
+      "details": [
+        "right hand weaker",
+        "forearm fasciculations",
+        "right foot catching on stairs"
+      ]
+    },
+    {
+      "date": "2025-05",
+      "event": "mobility_change",
+      "details": [
+        "stopped running because right leg felt heavy"
+      ]
+    },
+    {
+      "date": "2025-08-12/2026-02-05",
+      "event": "physiotherapy",
+      "details": [
+        "18 sessions",
+        "right ankle dorsiflexion declined from 4/5 to 3/5",
+        "right calf and thigh about 2 cm smaller",
+        "two falls",
+        "began using cane outside"
+      ]
+    },
+    {
+      "date": "2026-02-16",
+      "event": "urgent_neurology_referral",
+      "details": [
+        "progressive painless weakness",
+        "muscle cramps",
+        "fasciculations",
+        "weight loss",
+        "brisk reflexes"
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "event": "neuromuscular_consultation",
+      "details": [
+        "upper- and lower-motor-neuron signs",
+        "bulbar symptoms",
+        "orthopnea",
+        "normal sensation"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "event": "electrodiagnostic_testing",
+      "details": [
+        "widespread active denervation and chronic reinnervation in four body regions",
+        "normal sensory conduction",
+        "no conduction block"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "event": "als_diagnosis",
+      "details": [
+        "limb onset",
+        "early bulbar involvement",
+        "early respiratory involvement"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "event": "first_multidisciplinary_als_clinic_visit",
+      "details": [
+        "27 months from first symptom",
+        "10 weeks from diagnosis"
+      ]
+    }
   ],
   "measurements": [
-    {"type": "ALSFRS-R", "months_since_symptom_onset": 0, "value": 48, "scale_min": 0, "scale_max": 48},
-    {"type": "ALSFRS-R", "months_since_symptom_onset": 6, "value": 43, "scale_min": 0, "scale_max": 48},
-    {"type": "ALSFRS-R", "months_since_symptom_onset": 12, "value": 39, "scale_min": 0, "scale_max": 48},
-    {"type": "ALSFRS-R", "months_since_symptom_onset": 18, "value": 36, "scale_min": 0, "scale_max": 48},
-    {"type": "ALSFRS-R", "months_since_symptom_onset": 24, "value": 33, "scale_min": 0, "scale_max": 48},
-    {"type": "ALSFRS-R", "date": "2026-09-22", "months_since_symptom_onset": 27, "value": 32, "scale_min": 0, "scale_max": 48, "subscores": {"bulbar": 9, "fine_motor": 6, "gross_motor": 7, "breathing": 10}},
-    {"type": "grip_strength", "date": "2026-09-22", "side": "right", "value": 14, "unit": "kg", "method": "dynamometer"},
-    {"type": "grip_strength", "date": "2026-09-22", "side": "left", "value": 32, "unit": "kg", "method": "dynamometer"},
-    {"type": "key_pinch", "date": "2026-09-22", "side": "right", "value": 3, "unit": "kg"},
-    {"type": "key_pinch", "date": "2026-09-22", "side": "left", "value": 8, "unit": "kg"},
-    {"type": "nine_hole_peg_test", "date": "2026-09-22", "side": "right", "value": 44, "unit": "seconds"},
-    {"type": "nine_hole_peg_test", "date": "2026-09-22", "side": "left", "value": 23, "unit": "seconds"},
-    {"type": "speaking_rate", "date": "2026-09-22", "time": "09:00", "value": 165, "unit": "words_per_minute", "method": "same reading passage"},
-    {"type": "speaking_rate", "date": "2026-09-22", "time": "16:00", "value": 118, "unit": "words_per_minute", "method": "same reading passage"},
-    {"type": "sentence_intelligibility", "date": "2026-09-22", "time": "09:00", "value": 98, "unit": "percent"},
-    {"type": "sentence_intelligibility", "date": "2026-09-22", "time": "16:00", "value": 91, "unit": "percent"},
-    {"type": "timed_water_swallow", "date": "2026-09-22", "volume": 100, "volume_unit": "mL", "result": "cough on thin liquid"},
-    {"type": "forced_vital_capacity", "date": "2026-06-18", "position": "sitting", "value": 78, "unit": "percent_predicted"},
-    {"type": "forced_vital_capacity", "date": "2026-06-18", "position": "supine", "value": 64, "unit": "percent_predicted"},
-    {"type": "sniff_nasal_inspiratory_pressure", "date": "2026-06-18", "value": 52, "unit": "cm_H2O"},
-    {"type": "forced_vital_capacity", "date": "2026-09-22", "position": "sitting", "value": 76, "unit": "percent_predicted"},
-    {"type": "forced_vital_capacity", "date": "2026-09-22", "position": "supine", "value": 61, "unit": "percent_predicted"},
-    {"type": "cough_peak_flow", "date": "2026-09-22", "value": 310, "unit": "L_per_minute"},
-    {"type": "ten_metre_walk", "date": "2026-09-22", "value": 14.2, "unit": "seconds", "assistive_device": "cane"},
-    {"type": "falls", "date": "2026-09-22", "window": "past_three_months", "value": 2, "context": "both after 18:00"},
-    {"type": "weight", "date": "2026-06-11", "value": 78, "unit": "kg"},
-    {"type": "weight", "date": "2026-09-22", "value": 77.5, "unit": "kg"},
-    {"type": "weight", "relative_date": "approximately_two_years_before_2026-09-22", "value": 86, "unit": "kg"},
-    {"type": "serum_neurofilament_light_chain", "date": "2026-06-12", "value": 88, "unit": "pg_per_mL"},
-    {"type": "creatine_kinase", "date": "2026-06-12", "value": 470, "unit": "U_per_L"},
-    {"type": "ECAS", "date": "2026-09-22", "value": 101, "scale_max": 136, "note": "verbal fluency and executive scores below cut-off; memory, language and visuospatial scores normal"}
+    {
+      "type": "ALSFRS-R",
+      "date": "2024-06-01",
+      "months_since_symptom_onset": 0,
+      "value": 48,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2024-06-01",
+      "months_since_symptom_onset": 0,
+      "value": 100,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2024-06-01",
+      "months_since_symptom_onset": 0,
+      "position": "sitting",
+      "value": 96,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2024-06-01",
+      "months_since_symptom_onset": 0,
+      "time": "16:00",
+      "value": 99,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2024-09-22",
+      "months_since_symptom_onset": 3,
+      "value": 46,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2024-09-22",
+      "months_since_symptom_onset": 3,
+      "value": 96,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2024-09-22",
+      "months_since_symptom_onset": 3,
+      "position": "sitting",
+      "value": 94,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2024-09-22",
+      "months_since_symptom_onset": 3,
+      "time": "16:00",
+      "value": 99,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2024-12-09",
+      "months_since_symptom_onset": 6,
+      "value": 43,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2024-12-09",
+      "months_since_symptom_onset": 6,
+      "value": 91,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2024-12-09",
+      "months_since_symptom_onset": 6,
+      "position": "sitting",
+      "value": 92,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2024-12-09",
+      "months_since_symptom_onset": 6,
+      "time": "16:00",
+      "value": 98,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2025-03-01",
+      "months_since_symptom_onset": 9,
+      "value": 41,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2025-03-01",
+      "months_since_symptom_onset": 9,
+      "value": 87,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2025-03-01",
+      "months_since_symptom_onset": 9,
+      "position": "sitting",
+      "value": 90,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2025-03-01",
+      "months_since_symptom_onset": 9,
+      "time": "16:00",
+      "value": 98,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2025-06-01",
+      "months_since_symptom_onset": 12,
+      "value": 39,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2025-06-01",
+      "months_since_symptom_onset": 12,
+      "value": 82,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2025-06-01",
+      "months_since_symptom_onset": 12,
+      "position": "sitting",
+      "value": 88,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2025-06-01",
+      "months_since_symptom_onset": 12,
+      "time": "16:00",
+      "value": 97,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2025-09-22",
+      "months_since_symptom_onset": 15,
+      "value": 37,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2025-09-22",
+      "months_since_symptom_onset": 15,
+      "value": 78,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2025-09-22",
+      "months_since_symptom_onset": 15,
+      "position": "sitting",
+      "value": 86,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2025-09-22",
+      "months_since_symptom_onset": 15,
+      "time": "16:00",
+      "value": 96,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2025-12-01",
+      "months_since_symptom_onset": 18,
+      "value": 36,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2025-12-01",
+      "months_since_symptom_onset": 18,
+      "value": 76,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2025-12-01",
+      "months_since_symptom_onset": 18,
+      "position": "sitting",
+      "value": 84,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2025-12-01",
+      "months_since_symptom_onset": 18,
+      "time": "16:00",
+      "value": 95,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2026-03-01",
+      "months_since_symptom_onset": 21,
+      "value": 34,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2026-03-01",
+      "months_since_symptom_onset": 21,
+      "value": 74,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2026-03-01",
+      "months_since_symptom_onset": 21,
+      "position": "sitting",
+      "value": 82,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2026-03-01",
+      "months_since_symptom_onset": 21,
+      "time": "16:00",
+      "value": 94,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2026-06-18",
+      "months_since_symptom_onset": 24,
+      "value": 33,
+      "scale_min": 0,
+      "scale_max": 48
+    },
+    {
+      "type": "nerve_control",
+      "date": "2026-06-18",
+      "months_since_symptom_onset": 24,
+      "value": 72,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2026-06-18",
+      "months_since_symptom_onset": 24,
+      "position": "sitting",
+      "value": 78,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2026-06-18",
+      "months_since_symptom_onset": 24,
+      "time": "16:00",
+      "value": 93,
+      "unit": "percent"
+    },
+    {
+      "type": "ALSFRS-R",
+      "date": "2026-09-22",
+      "months_since_symptom_onset": 27,
+      "value": 32,
+      "scale_min": 0,
+      "scale_max": 48,
+      "subscores": {
+        "bulbar": 9,
+        "fine_motor": 6,
+        "gross_motor": 7,
+        "breathing": 10
+      }
+    },
+    {
+      "type": "nerve_control",
+      "date": "2026-09-22",
+      "months_since_symptom_onset": 27,
+      "value": 70,
+      "unit": "score",
+      "scale_max": 100,
+      "synthetic": true
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2026-09-22",
+      "months_since_symptom_onset": 27,
+      "position": "sitting",
+      "value": 76,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2026-09-22",
+      "months_since_symptom_onset": 27,
+      "time": "16:00",
+      "value": 91,
+      "unit": "percent"
+    },
+    {
+      "type": "sentence_intelligibility",
+      "date": "2026-09-22",
+      "months_since_symptom_onset": 27,
+      "time": "09:00",
+      "value": 98,
+      "unit": "percent"
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-06-15",
+      "months_since_symptom_onset": 0,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-07-15",
+      "months_since_symptom_onset": 1,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-08-15",
+      "months_since_symptom_onset": 2,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-09-15",
+      "months_since_symptom_onset": 3,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-10-15",
+      "months_since_symptom_onset": 4,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-11-15",
+      "months_since_symptom_onset": 5,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2024-12-15",
+      "months_since_symptom_onset": 6,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-01-15",
+      "months_since_symptom_onset": 7,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-02-15",
+      "months_since_symptom_onset": 8,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-03-15",
+      "months_since_symptom_onset": 9,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-04-15",
+      "months_since_symptom_onset": 10,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-05-15",
+      "months_since_symptom_onset": 11,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-06-15",
+      "months_since_symptom_onset": 12,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-07-15",
+      "months_since_symptom_onset": 13,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-08-15",
+      "months_since_symptom_onset": 14,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-09-15",
+      "months_since_symptom_onset": 15,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-10-15",
+      "months_since_symptom_onset": 16,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-11-15",
+      "months_since_symptom_onset": 17,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2025-12-15",
+      "months_since_symptom_onset": 18,
+      "value": 3,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-01-15",
+      "months_since_symptom_onset": 19,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-02-15",
+      "months_since_symptom_onset": 20,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-03-15",
+      "months_since_symptom_onset": 21,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-04-15",
+      "months_since_symptom_onset": 22,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-05-15",
+      "months_since_symptom_onset": 23,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-06-15",
+      "months_since_symptom_onset": 24,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-07-15",
+      "months_since_symptom_onset": 25,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-08-15",
+      "months_since_symptom_onset": 26,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "daily_energy",
+      "date": "2026-09-15",
+      "months_since_symptom_onset": 27,
+      "value": 2,
+      "unit": "score",
+      "scale_max": 3,
+      "synthetic": true
+    },
+    {
+      "type": "weight",
+      "relative_date": "approximately_two_years_before_2026-09-22",
+      "value": 86,
+      "unit": "kg",
+      "date": "2024-09-22"
+    },
+    {
+      "type": "weight",
+      "date": "2026-06-11",
+      "value": 78,
+      "unit": "kg"
+    },
+    {
+      "type": "serum_neurofilament_light_chain",
+      "date": "2026-06-12",
+      "value": 88,
+      "unit": "pg_per_mL"
+    },
+    {
+      "type": "creatine_kinase",
+      "date": "2026-06-12",
+      "value": 470,
+      "unit": "U_per_L"
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2026-06-18",
+      "position": "supine",
+      "value": 64,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "sniff_nasal_inspiratory_pressure",
+      "date": "2026-06-18",
+      "value": 52,
+      "unit": "cm_H2O"
+    },
+    {
+      "type": "grip_strength",
+      "date": "2026-09-22",
+      "side": "right",
+      "value": 14,
+      "unit": "kg",
+      "method": "dynamometer"
+    },
+    {
+      "type": "grip_strength",
+      "date": "2026-09-22",
+      "side": "left",
+      "value": 32,
+      "unit": "kg",
+      "method": "dynamometer"
+    },
+    {
+      "type": "key_pinch",
+      "date": "2026-09-22",
+      "side": "right",
+      "value": 3,
+      "unit": "kg"
+    },
+    {
+      "type": "key_pinch",
+      "date": "2026-09-22",
+      "side": "left",
+      "value": 8,
+      "unit": "kg"
+    },
+    {
+      "type": "nine_hole_peg_test",
+      "date": "2026-09-22",
+      "side": "right",
+      "value": 44,
+      "unit": "seconds"
+    },
+    {
+      "type": "nine_hole_peg_test",
+      "date": "2026-09-22",
+      "side": "left",
+      "value": 23,
+      "unit": "seconds"
+    },
+    {
+      "type": "speaking_rate",
+      "date": "2026-09-22",
+      "time": "09:00",
+      "value": 165,
+      "unit": "words_per_minute",
+      "method": "same reading passage"
+    },
+    {
+      "type": "speaking_rate",
+      "date": "2026-09-22",
+      "time": "16:00",
+      "value": 118,
+      "unit": "words_per_minute",
+      "method": "same reading passage"
+    },
+    {
+      "type": "timed_water_swallow",
+      "date": "2026-09-22",
+      "volume": 100,
+      "volume_unit": "mL",
+      "result": "cough on thin liquid"
+    },
+    {
+      "type": "forced_vital_capacity",
+      "date": "2026-09-22",
+      "position": "supine",
+      "value": 61,
+      "unit": "percent_predicted"
+    },
+    {
+      "type": "cough_peak_flow",
+      "date": "2026-09-22",
+      "value": 310,
+      "unit": "L_per_minute"
+    },
+    {
+      "type": "ten_metre_walk",
+      "date": "2026-09-22",
+      "value": 14.2,
+      "unit": "seconds",
+      "assistive_device": "cane"
+    },
+    {
+      "type": "falls",
+      "date": "2026-09-22",
+      "window": "past_three_months",
+      "value": 2,
+      "context": "both after 18:00"
+    },
+    {
+      "type": "weight",
+      "date": "2026-09-22",
+      "value": 77.5,
+      "unit": "kg"
+    },
+    {
+      "type": "ECAS",
+      "date": "2026-09-22",
+      "value": 101,
+      "scale_max": 136,
+      "note": "verbal fluency and executive scores below cut-off; memory, language and visuospatial scores normal"
+    }
   ],
   "functional_context_at_2026_09_22": {
     "handwriting": "illegible after about ten minutes",

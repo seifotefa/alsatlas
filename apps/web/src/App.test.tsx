@@ -9,10 +9,12 @@ afterEach(() => {
 });
 
 describe('ALSense MVP', () => {
-  it('shows the research disclosure', () => {
+  it('opens the product without calling the record a prototype', () => {
     render(<App />);
-    expect(screen.getByText(/research prototype/i)).toBeInTheDocument();
-    expect(screen.getByText(/does not diagnose ALS/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /clearer ALS journey/i })).toBeInTheDocument();
+    expect(screen.queryByText(/research prototype/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/fictional/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/synthetic/i)).not.toBeInTheDocument();
   });
 
   it('opens the research reward disclosure', async () => {
@@ -24,7 +26,16 @@ describe('ALSense MVP', () => {
       return { ok: true, json: async () => ({ consent: null, contribution: null, reward: null, rewardLamports: 1_000_000, storage: 'file', network: 'devnet' }) };
     }));
     render(<App />);
-    fireEvent.click(screen.getAllByRole('button', { name: /view research network/i })[0]);
-    expect(await screen.findByText('Solana devnet demonstration reward — no monetary value.')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Research' }));
+    expect(await screen.findByRole('heading', { name: 'Research network' })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /open research dashboard/i }));
+    expect(await screen.findByRole('heading', { name: 'University desk' })).toBeInTheDocument();
+    expect(screen.getByText('Dr. Priya Shah')).toBeInTheDocument();
+    expect(screen.getByText('Virtual follow-up')).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Available to approved researchers' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Solana reward' })).toBeInTheDocument();
+    expect(screen.queryByText(/does not connect/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/synthetic/i)).not.toBeInTheDocument();
+    expect(screen.queryByText('Alex Chen')).not.toBeInTheDocument();
   });
 });
