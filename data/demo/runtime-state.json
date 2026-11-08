@@ -186,6 +186,29 @@
         "events": [],
         "channel": "elevenlabs"
       }
+    },
+    {
+      "id": "connect-check-1794154482635",
+      "note": "Connection check",
+      "energy": 2,
+      "createdAt": "2026-11-08T16:14:42.635Z",
+      "patientId": "demo-alex-chen",
+      "researchConsent": false
+    },
+    {
+      "id": "checkin-1794154552793-1",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T16:15:52.804Z",
+      "energy": 2,
+      "note": "About usual · Nothing new · No · Today was steady.",
+      "responses": [
+        "About usual",
+        "Nothing new",
+        "No",
+        "Today was steady."
+      ],
+      "researchConsent": false,
+      "synthetic": true
     }
   ],
   "media": [

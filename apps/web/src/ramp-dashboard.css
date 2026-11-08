@@ -64,3 +64,46 @@ html,body,#root{min-height:100%}body{font-family:Inter,ui-sans-serif,system-ui,-
 .assistant-page .assistant-composer button:last-child{background:#1d4ed8}
 .assistant-page .assistant-thread footer{padding:0 24px 16px;font-size:13px;line-height:20px}
 .assistant-page .assistant-shell button:focus-visible,.assistant-page .assistant-composer input:focus-visible{outline:2px solid #1d4ed8;outline-offset:2px}
+.care-home{display:grid;gap:18px;color:#111827}
+.care-lead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.care-lead p{margin:0 0 8px;color:#4b5565;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none}
+.care-lead h2{margin:0;max-width:640px;font-size:40px;line-height:1.05;font-weight:500;letter-spacing:-.03em;color:#111827}
+.care-lead span{display:block;max-width:460px;margin-top:10px;color:#667085;font-size:15px;line-height:1.5}
+.care-go{height:44px;padding:0 16px;border:0;border-radius:8px;background:#111827;color:#fff;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;cursor:pointer;flex:none}
+.care-go:hover{background:#1f2937}
+.care-board{background:#fff;border:1px solid rgba(17,24,39,.08);border-radius:16px;padding:16px}
+.care-board>header{display:flex;align-items:center;gap:12px;padding:4px 6px 14px}
+.care-avatar{width:36px;height:36px;border-radius:8px;background:#eceff4;color:#4b5565;display:grid;place-items:center;font-size:12px;font-weight:500}
+.care-board>header div{display:grid}
+.care-board>header b{font-size:15px}
+.care-board>header small{color:#8b95a1;font-size:13px}
+.care-board>header em{margin-left:auto;display:inline-flex;align-items:center;gap:8px;color:#4b5565;font-style:normal;font-size:13px;font-weight:400}
+.care-board>header em i{width:8px;height:8px;border-radius:50%;background:#1d4ed8}
+.care-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.care-stats article{background:#f5f7fa;border:1px solid rgba(17,24,39,.08);border-radius:12px;padding:16px}
+.care-stats small{display:block;color:#8b95a1;font-size:13px;margin-bottom:8px}
+.care-stats p{display:flex;align-items:baseline;gap:6px;margin:0}
+.care-stats strong{font-size:32px;line-height:1;font-weight:500;letter-spacing:0;font-variant-numeric:tabular-nums}
+.care-stats span{color:#6b7487;font-size:14px;font-weight:400}
+.care-split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.72fr);gap:10px;margin-top:10px}
+.care-chart,.care-split aside{border:1px solid rgba(17,24,39,.08);border-radius:12px;padding:16px}
+.care-chart>div{display:flex;justify-content:space-between;align-items:center}
+.care-chart b,.care-split aside>b{font-size:14px;font-weight:500}
+.care-chart button{border:0;background:transparent;color:#1d4ed8;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;cursor:pointer}
+.care-home .trend-chart{height:240px;color:#1d4ed8}
+.care-home .trend-chart .area{fill:#eef4ff;stroke:none}
+.care-split aside ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}
+.care-split aside li,.care-split aside button{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;padding:0;text-align:left;color:inherit;cursor:pointer;font:inherit}
+.care-split aside svg{width:32px;height:32px;padding:8px;border-radius:8px;background:#eceff4;color:#4b5565;box-sizing:border-box;flex:none}
+.care-split aside li,.care-split aside button,.care-split aside span{min-width:0}
+.care-split aside span{display:grid;font-size:14px;font-weight:550}
+.care-split aside small{color:#98a2b3;font-size:12px;font-weight:450}
+.care-recent{background:#fff;border:1px solid rgba(17,24,39,.08);border-radius:16px;padding:16px 16px 8px}
+.care-recent h3{margin:0 0 8px;font-size:16px;font-weight:500}
+.care-recent ul{list-style:none;margin:0;padding:0}
+.care-recent li{display:grid;grid-template-columns:120px 1fr auto auto;gap:16px;align-items:center;padding:12px 0;border-top:1px solid #eef2ef;font-size:14px}
+.care-recent span{color:#98a2b3}
+.care-recent em{font-style:normal;font-variant-numeric:tabular-nums}
+.care-recent small{color:#6b7487;font-weight:400}
+.care-home button:focus-visible{outline:2px solid #1d4ed8;outline-offset:2px}
+@media(max-width:980px){.care-lead,.care-stats,.care-split,.care-recent li{display:grid;grid-template-columns:1fr}.care-lead h2{font-size:34px}.care-board>header em{margin-left:0}}

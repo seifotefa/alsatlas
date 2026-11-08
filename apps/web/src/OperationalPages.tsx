@@ -36,17 +36,53 @@ export function OperationalOverview({go}:{go:Go}){
   useEffect(()=>{Promise.all([fetch(`${API}/patients/demo-alex-chen/observations`).then(r=>r.json()),fetch(`${API}/patients/demo-alex-chen/progress`).then(r=>r.json())]).then(([o,p])=>{setObservations(o.observations||[]);setProgress(p)}).catch(()=>setObservations([]))},[]);
   const recent=[...(observations||[])].sort((a,b)=>String(b.date||b.observedAt||'').localeCompare(String(a.date||a.observedAt||''))).slice(0,5);
   const lastCheckin=progress?.checkins?.at(-1)?.createdAt;
-  return <div className="op-page"><PageHeader title="Overview" description="Alex Chen’s recorded observations and upcoming care tasks" action={<Button onClick={()=>go('checkin')}>Start check-in <ArrowRight size={15}/></Button>}/>
-    <section className="patient-summary" aria-label="Patient summary"><div><span className="avatar">AC</span><span><b>Alex Chen</b><small>Patient record</small></span></div><dl><div><dt>Last check-in</dt><dd>{lastCheckin?dateLabel(lastCheckin):'—'}</dd></div><div><dt>Next appointment</dt><dd>Nov 9 · 10:30 AM</dd></div></dl></section>
-    <section className="metric-strip" aria-label="Current measures"><article><span>ALSFRS-R</span><strong>{progress?.alsfrs?.at(-1)?.value ?? '—'} <small>/ 48</small></strong><em>Last clinical visit</em></article><article><span>Sitting FVC</span><strong>{progress?.latest?.fvcSitting ?? '—'}<small>%</small></strong><em>Latest recorded test</em></article><article><span>Speech clarity</span><strong>{progress?.latest?.speechAfternoon ?? '—'}<small>%</small></strong><em>Afternoon sample</em></article><article><span>Check-ins</span><strong>{progress?.checkins?.length ?? '—'}</strong><em>Recorded entries</em></article></section>
-    <section className="overview-grid"><article className="op-card chart-card"><div className="card-heading"><div><h3>Recorded function</h3><p>ALSFRS-R observations</p></div><button className="text-button" onClick={()=>go('progress')}>View progress <ArrowRight size={14}/></button></div>{progress?<TrendChart points={progress.alsfrs||[]}/>:<LoadingRows/>}</article>
-      <aside className="op-card task-card"><div className="card-heading"><div><h3>Upcoming</h3><p>Care tasks</p></div></div><div className="task-row"><Calendar size={16}/><span><b>Neurology review</b><small>Nov 9 · 10:30 AM · Virtual</small></span></div><button className="task-row action" onClick={()=>go('referral')}><FileText size={16}/><span><b>Prepare referral summary</b><small>Review recorded evidence</small></span><ArrowRight size={14}/></button><button className="task-row action" onClick={()=>go('checkin')}><Check size={16}/><span><b>Complete today’s check-in</b><small>Movement and voice · 3 min</small></span><ArrowRight size={14}/></button></aside>
+  const measures = [
+    ['ALSFRS-R', progress?.alsfrs?.at(-1)?.value ?? '—', '/ 48'],
+    ['Sitting FVC', progress?.latest?.fvcSitting ?? '—', '%'],
+    ['Speech clarity', progress?.latest?.speechAfternoon ?? '—', '%'],
+    ['Check-ins', progress?.checkins?.length ?? '—', ''],
+  ];
+  return <div className="care-home">
+    <header className="care-lead">
+      <div>
+        <p>Care workspace</p>
+        <h2>Alex’s record, between visits</h2>
+        <span>The same numbers a clinician sees. One check-in keeps the timeline current.</span>
+      </div>
+      <button className="care-go" onClick={()=>go('checkin')}>Start check-in <ArrowRight size={16}/></button>
+    </header>
+    <section className="care-board" aria-label="Alex Chen record">
+      <header>
+        <span className="care-avatar">AC</span>
+        <div><b>Alex Chen</b><small>Patient record{lastCheckin ? ` · last check-in ${dateLabel(lastCheckin)}` : ''}</small></div>
+        <em><i/>Recorded</em>
+      </header>
+      <div className="care-stats">
+        {measures.map(([label, value, unit]) => <article key={label}><small>{label}</small><p><strong>{value}</strong>{unit && <span>{unit}</span>}</p></article>)}
+      </div>
+      <div className="care-split">
+        <div className="care-chart">
+          <div><b>Recorded function</b><button onClick={()=>go('progress')}>View progress <ArrowRight size={14}/></button></div>
+          {progress ? <TrendChart points={progress.alsfrs || []} area/> : <LoadingRows/>}
+        </div>
+        <aside>
+          <b>Next in care</b>
+          <ul>
+            <li><button onClick={()=>go('checkin')}><Check size={16}/><span>Today’s check-in<small>Movement and voice · 3 min</small></span></button></li>
+            <li><Calendar size={16}/><span>Neurology review<small>Nov 9 · 10:30 AM · Virtual</small></span></li>
+            <li><button onClick={()=>go('referral')}><FileText size={16}/><span>Referral summary<small>Recorded evidence for the visit</small></span></button></li>
+          </ul>
+        </aside>
+      </div>
     </section>
-    <section className="op-card compact-table"><div className="card-heading"><div><h3>Recent observations</h3><p>Latest entries</p></div></div>{observations===null?<LoadingRows/>:<div className="op-table"><div className="op-table-head"><span>Date</span><span>Observation</span><span>Source</span><span>Status</span></div>{recent.map(o=><div className="op-table-row" key={o.id}><span>{dateLabel(o.date||o.observedAt)}</span><span><b>{o.type}</b> · {o.value} {o.unit}</span><span>{sourceLabel(o.source)}</span><span className="status-text">{statusLabel(o.status)}</span></div>)}</div>}</section>
+    <section className="care-recent" aria-label="Recent observations">
+      <h3>Recent observations</h3>
+      {observations === null ? <LoadingRows/> : <ul>{recent.map(item => <li key={item.id}><span>{dateLabel(item.date || item.observedAt)}</span><b>{item.type}</b><em>{item.value} {item.unit}</em><small>{statusLabel(item.status)}</small></li>)}</ul>}
+    </section>
   </div>
 }
 
-function TrendChart({points,label='Recorded observations'}:{points:{month:number;value:number}[];label?:string}){if(!points.length)return <p className="chart-source">No recorded points in this range.</p>;const ordered=[...points].sort((a,b)=>a.month-b.month);const width=720,height=260,pad={l:46,r:20,t:28,b:34};const minX=ordered[0].month;const maxX=ordered[ordered.length-1].month;const spanX=maxX-minX;const low=Math.min(...ordered.map(p=>p.value));const high=Math.max(...ordered.map(p=>p.value));const padY=Math.max(1,(high-low)*0.15);const minY=low-padY;const maxY=high+padY;const x=(v:number,index:number)=>pad.l+(spanX>0?(v-minX)/spanX:ordered.length<=1?0.5:index/(ordered.length-1))*(width-pad.l-pad.r);const y=(v:number)=>pad.t+((maxY-v)/(maxY-minY))*(height-pad.t-pad.b);const line=ordered.map((p,i)=>`${i?'L':'M'} ${x(p.month,i)} ${y(p.value)}`).join(' ');const yTicks=[high,Math.round((high+low)/2),low];const xTicks=[ordered[0].month,ordered[Math.floor((ordered.length-1)/2)].month,ordered[ordered.length-1].month].filter((month,index,list)=>list.indexOf(month)===index);return <svg className="trend-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${label} from month ${minX} through month ${maxX}`}><g className="axis-grid">{yTicks.map(v=><g key={v}><line x1={pad.l} x2={width-pad.r} y1={y(v)} y2={y(v)}/><text x={pad.l-8} y={y(v)+4} textAnchor="end">{v}</text></g>)}</g><path d={line} fill="none" stroke="currentColor" strokeWidth="2.5"/>{ordered.map((p,i)=>{const last=i===ordered.length-1;return <g key={`${p.month}-${i}`}><circle cx={x(p.month,i)} cy={y(p.value)} r={last?5:3.5} fill={last?'currentColor':'#fff'} stroke="currentColor" strokeWidth="2"/>{last&&<text className="now-label" x={x(p.month,i)} y={y(p.value)-12} textAnchor="end">Now</text>}</g>})}{xTicks.map(v=>{const index=ordered.findIndex(p=>p.month===v);return <text className="x-label" key={v} x={x(v,index)} y={height-7}>Month {v}</text>})}</svg>}
+function TrendChart({points,label='Recorded observations',area=false}:{points:{month:number;value:number}[];label?:string;area?:boolean}){if(!points.length)return <p className="chart-source">No recorded points in this range.</p>;const ordered=[...points].sort((a,b)=>a.month-b.month);const width=720,height=260,pad={l:46,r:20,t:28,b:34};const minX=ordered[0].month;const maxX=ordered[ordered.length-1].month;const spanX=maxX-minX;const low=Math.min(...ordered.map(p=>p.value));const high=Math.max(...ordered.map(p=>p.value));const padY=Math.max(1,(high-low)*0.15);const minY=low-padY;const maxY=high+padY;const x=(v:number,index:number)=>pad.l+(spanX>0?(v-minX)/spanX:ordered.length<=1?0.5:index/(ordered.length-1))*(width-pad.l-pad.r);const y=(v:number)=>pad.t+((maxY-v)/(maxY-minY))*(height-pad.t-pad.b);const line=ordered.map((p,i)=>`${i?'L':'M'} ${x(p.month,i)} ${y(p.value)}`).join(' ');const areaPath=`${line} L ${x(ordered[ordered.length-1].month,ordered.length-1)} ${height-pad.b} L ${x(ordered[0].month,0)} ${height-pad.b} Z`;const yTicks=[high,Math.round((high+low)/2),low];const xTicks=[ordered[0].month,ordered[Math.floor((ordered.length-1)/2)].month,ordered[ordered.length-1].month].filter((month,index,list)=>list.indexOf(month)===index);return <svg className="trend-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${label} from month ${minX} through month ${maxX}`}><g className="axis-grid">{yTicks.map(v=><g key={v}><line x1={pad.l} x2={width-pad.r} y1={y(v)} y2={y(v)}/><text x={pad.l-8} y={y(v)+4} textAnchor="end">{v}</text></g>)}</g>{area&&<path className="area" d={areaPath}/>}<path d={line} fill="none" stroke="currentColor" strokeWidth="2.5"/>{ordered.map((p,i)=>{const last=i===ordered.length-1;return <g key={`${p.month}-${i}`}><circle cx={x(p.month,i)} cy={y(p.value)} r={last?5:3.5} fill={last?'currentColor':'#fff'} stroke="currentColor" strokeWidth="2"/>{last&&<text className="now-label" x={x(p.month,i)} y={y(p.value)-12} textAnchor="end">Now</text>}</g>})}{xTicks.map(v=>{const index=ordered.findIndex(p=>p.month===v);return <text className="x-label" key={v} x={x(v,index)} y={height-7}>Month {v}</text>})}</svg>}
 
 export function OperationalCheckin({go}:{go:Go}){return <VoiceCheckin onDone={()=>go('overview')}/>}
 

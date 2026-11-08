@@ -29,10 +29,10 @@ describe('ALSense MVP', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Research' }));
     expect(await screen.findByRole('heading', { name: /self-improving dataset for ALS/i })).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /explore the network/i }));
-    expect(await screen.findByRole('heading', { name: 'University desk' })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: /Eighteen centers/i })).toBeInTheDocument();
     expect(screen.getByText('Dr. Priya Shah')).toBeInTheDocument();
-    expect(screen.getByText('Virtual follow-up')).toBeInTheDocument();
-    expect(await screen.findByRole('heading', { name: 'Available to approved researchers' })).toBeInTheDocument();
+    expect(screen.getByText('Sunnybrook Health Sciences')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Request a dataset' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Solana reward' })).toBeInTheDocument();
     expect(screen.queryByText(/does not connect/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/synthetic/i)).not.toBeInTheDocument();

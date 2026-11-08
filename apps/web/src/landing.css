@@ -1,5 +1,7 @@
 .marketing,.marketing h1,.marketing h2,.marketing h3,.marketing button,.marketing p,.marketing td,.marketing th{font-family:Inter,ui-sans-serif,system-ui,sans-serif}
 .marketing{min-height:100vh;background:#f5f7fa;color:#111827}
+.marketing.home{height:100vh;overflow:hidden}
+.marketing.home .home-main{height:calc(100vh - 64px);overflow:hidden;padding-bottom:0}
 .marketing-nav{height:64px;max-width:1120px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:64px 1fr auto;align-items:center}
 .marketing-logo{border:0;background:transparent;padding:0;cursor:pointer;width:46px}
 .marketing-logo img{display:block;height:46px;width:auto}
@@ -88,6 +90,8 @@
 .referral-tool{margin-top:28px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
 .referral-tool form,.referral-result{background:#fff;border:1px solid #eceff3;border-radius:18px;padding:8px 20px 20px}
 .referral-result{position:sticky;top:24px}
+.referral-result a{color:#1d4ed8}
+.referral-result{position:sticky;top:24px}
 .referral-group h3{margin:18px 0 0;font-size:13px;font-weight:500;color:#6b7487}
 .referral-group:first-child h3{margin-top:12px}
 .page-lead a{color:#1d4ed8}
@@ -98,7 +102,9 @@
 .tri button{height:36px;padding:0 14px;border-radius:8px;border:1px solid rgba(17,24,39,.08);background:#fff;font-size:14px;font-weight:500;color:#4b5565;cursor:pointer}
 .tri button.on{background:#111827;color:#fff;border-color:#111827}
 .tri button:focus-visible{outline:2px solid #1d4ed8;outline-offset:2px}
-.referral-tool form .pill{margin-top:8px}
+.referral-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:8px}
+.referral-actions.top{margin:12px 0 4px}
+.referral-actions .pill{margin-top:0}
 .referral-tool form .pill:disabled{opacity:.45;cursor:default}
 .referral-error{margin:0 0 12px;color:#9f1239;font-size:14px}
 .referral-result{padding-top:20px}
@@ -138,49 +144,47 @@
 .enter button:hover{color:#1d4ed8}
 .network{max-width:1180px;margin:0 auto;padding:28px 28px 64px;color:#111827}
 .network-hero{display:grid;grid-template-columns:minmax(280px,.82fr) 1.18fr;gap:36px;align-items:center}
-.network-kicker{margin:0 0 14px;color:#1b7a43;font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase}
-.network-copy h1{margin:0;max-width:460px;font-size:58px;line-height:.98;font-weight:560;letter-spacing:-.045em}
+.network-kicker{margin:0 0 12px;color:#4b5565;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none}
+.network-copy h1{margin:0;max-width:460px;font-size:48px;line-height:1.05;font-weight:500;letter-spacing:-.03em}
 .network-copy p{max-width:430px;margin:18px 0 0;color:#667085;font-size:16px;line-height:1.55}
 .network-copy ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
 .network-copy li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
-.network-copy li svg{color:#1b7a43}
-.network-copy .pill{margin-top:28px;height:44px;padding:0 18px;border-radius:999px;background:#111}
-.network-panel{background:#fff;border:1px solid #e7ece8;border-radius:22px;padding:16px;box-shadow:0 18px 50px rgba(17,24,39,.05)}
+.network-copy li svg{color:#6b7487}
+.network-copy .pill{margin-top:28px;height:44px;padding:0 16px;border-radius:8px;background:#111}
+.network-panel{background:#fff;border:1px solid rgba(17,24,39,.08);border-radius:16px;padding:16px}
 .network-panel header{display:flex;align-items:center;gap:12px;padding:4px 6px 14px}
-.network-mark{width:34px;height:34px;border-radius:10px;background:#eef8f1;color:#1b7a43;display:grid;place-items:center;flex:none}
+.network-mark{width:32px;height:32px;border-radius:8px;background:#eceff4;color:#4b5565;display:grid;place-items:center;flex:none}
 .network-panel header div{display:grid}
-.network-panel header b{font-size:15px;font-weight:620}
-.network-panel header small{color:#8b95a1;font-size:13px}
-.network-panel header em{margin-left:auto;display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 12px;border:1px solid #e6eee8;border-radius:999px;background:#f7fbf8;color:#1b7a43;font-style:normal;font-size:13px;font-weight:550}
-.network-panel header em i{width:7px;height:7px;border-radius:50%;background:#1b7a43}
+.network-panel header b{font-size:16px;font-weight:500}
+.network-panel header small{color:#6b7487;font-size:12px}
+.network-panel header em{margin-left:auto;display:inline-flex;align-items:center;gap:8px;color:#4b5565;font-style:normal;font-size:13px;font-weight:400}
+.network-panel header em i{width:8px;height:8px;border-radius:50%;background:#1d4ed8}
 .network-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.network-stats article{background:#fbfcfb;border:1px solid #eef2ef;border-radius:14px;padding:14px 16px 12px}
-.network-stats small{display:block;color:#8b95a1;font-size:13px;margin-bottom:8px}
-.network-stats p{display:flex;align-items:baseline;gap:8px;margin:0}
-.network-stats strong{font-size:32px;line-height:1;font-weight:560;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.network-stats span{color:#1b7a43;font-size:13px;font-weight:600}
+.network-stats article{background:#f5f7fa;border:1px solid rgba(17,24,39,.08);border-radius:12px;padding:16px}
+.network-stats small{display:block;color:#6b7487;font-size:12px;margin-bottom:8px}
+.network-stats strong{font-size:32px;line-height:1;font-weight:500;letter-spacing:0;font-variant-numeric:tabular-nums}
 .network-board{display:grid;grid-template-columns:1.2fr .95fr;gap:10px;margin-top:10px}
-.network-growth,.network-board aside{background:#fff;border:1px solid #eef2ef;border-radius:16px;padding:14px}
-.network-growth b,.network-board aside b{font-size:14px;font-weight:620}
+.network-growth,.network-board aside{background:#fff;border:1px solid rgba(17,24,39,.08);border-radius:12px;padding:16px}
+.network-growth b,.network-board aside b{font-size:14px;font-weight:500}
 .network-growth svg{width:100%;height:168px;display:block;margin-top:6px}
 .network-growth line{stroke:#eef2f4}
-.network-growth .fill{fill:#e7f6ec}
-.network-growth .stroke{fill:none;stroke:#1b7a43;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.network-growth circle{fill:#1b7a43}
+.network-growth .fill{fill:#eef4ff}
+.network-growth .stroke{fill:none;stroke:#1d4ed8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.network-growth circle{fill:#1d4ed8}
 .network-growth .axis{display:flex;justify-content:space-between;color:#98a2b3;font-size:12px;padding:0 8px}
 .network-board aside ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:14px}
 .network-board aside li{display:flex;align-items:center;gap:10px}
-.network-board aside svg{width:32px;height:32px;padding:8px;border-radius:50%;background:#f3faf5;color:#1b7a43;box-sizing:border-box}
+.network-board aside svg{width:32px;height:32px;padding:8px;border-radius:8px;background:#eceff4;color:#4b5565;box-sizing:border-box}
 .network-board aside span{display:grid;font-size:14px;font-weight:550;white-space:nowrap}
 .network-board aside small{color:#98a2b3;font-size:12px;font-weight:450}
-.network-flywheel{margin-top:22px;border:1px solid #e7ece8;border-radius:22px;background:#fff;padding:22px 18px;display:grid;grid-template-columns:220px 1fr;gap:12px;align-items:center}
-.network-flywheel h2{margin:0;font-size:30px;line-height:1.12;font-weight:560;letter-spacing:-.035em}
+.network-flywheel{margin-top:24px;border:1px solid rgba(17,24,39,.08);border-radius:16px;background:#fff;padding:24px;display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:center}
+.network-flywheel h2{margin:0;font-size:32px;line-height:1.12;font-weight:500;letter-spacing:-.03em}
 .network-flywheel ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .network-flywheel li{position:relative;display:grid;justify-items:center;text-align:center;gap:8px;padding:8px}
 .network-flywheel li>svg{position:absolute;left:-4px;top:22px;color:#c5ced6}
-.network-flywheel li>span{width:42px;height:42px;border-radius:12px;background:#f3faf5;color:#1b7a43;display:grid;place-items:center}
+.network-flywheel li>span{width:40px;height:40px;border-radius:8px;background:#eceff4;color:#4b5565;display:grid;place-items:center}
 .network-flywheel b,.network-flywheel small{display:block}
-.network-flywheel b{font-size:15px;font-weight:620}
+.network-flywheel b{font-size:16px;font-weight:500}
 .network-flywheel small{margin-top:4px;color:#667085;font-size:13px;line-height:1.4;max-width:160px}
 @media(max-width:980px){
   .network-hero,.network-board,.network-flywheel,.network-flywheel ol,.network-stats{grid-template-columns:1fr}

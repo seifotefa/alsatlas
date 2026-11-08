@@ -1,4 +1,4 @@
-import { useState, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
 import Activity from 'lucide-react/dist/esm/icons/activity';
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import ArrowUpRight from 'lucide-react/dist/esm/icons/arrow-up-right';
@@ -24,7 +24,7 @@ export type Page = 'home' | 'product' | 'diagnosis' | 'research';
 type Go = (view: 'home' | 'product' | 'diagnosis' | 'network' | 'survey' | 'dashboard' | 'research' | 'researcher', tab?: 'overview' | 'checkin' | 'progress' | 'referral' | 'research' | 'care' | 'assistant') => void;
 
 export function LandingPage({ page, go }: { page: Page; go: Go }) {
-  return <div className="marketing">
+  return <div className={page === 'home' ? 'marketing home' : 'marketing'}>
     <SiteNav page={page} go={go}/>
     {page === 'home' && <Home go={go}/>}
     {page === 'product' && <Product go={go}/>}
@@ -196,24 +196,41 @@ function referralVerdict(review: ReferralReview) {
   };
 }
 
+const demoNo: ReferralKey[] = ['pain', 'sensoryLoss', 'motorNeuronSigns'];
+
+const nearestSpecialist = {
+  name: 'Dr. Lorne Zinman',
+  clinic: 'Sunnybrook ALS Clinic',
+  place: '2075 Bayview Avenue, Toronto',
+  phone: '416-480-4213',
+  href: 'https://sunnybrook.ca/clinics/als-clinic/',
+};
+
+function demoAnswers(): Partial<Record<ReferralKey, Tri>> {
+  const filled: Partial<Record<ReferralKey, Tri>> = {};
+  for (const [, questions] of referralGroups) {
+    for (const [key] of questions) filled[key] = demoNo.includes(key) ? 'no' : 'yes';
+  }
+  return filled;
+}
+
 function ReferralSurvey() {
   const [answers, setAnswers] = useState<Partial<Record<ReferralKey, Tri>>>({});
   const [review, setReview] = useState<ReferralReview | null>(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [demo, setDemo] = useState(false);
   const ready = referralGroups.every(([, questions]) => questions.every(([key]) => answers[key]));
   const verdict = review ? referralVerdict(review) : null;
-
-  const submit = async (event: FormEvent) => {
-    event.preventDefault();
-    if (!ready) return;
+  const evaluate = async (intake: Partial<Record<ReferralKey, Tri>>) => {
     setBusy(true);
     setError('');
+    setReview(null);
     try {
       const response = await fetch('/api/referals/evaluate', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ intake: answers }),
+        body: JSON.stringify({ intake }),
       });
       if (!response.ok) throw new Error();
       setReview(await response.json());
@@ -223,24 +240,54 @@ function ReferralSurvey() {
       setBusy(false);
     }
   };
+  const fillDemo = () => {
+    setAnswers(demoAnswers());
+    setDemo(true);
+    setReview(null);
+    setError('');
+    requestAnimationFrame(() => document.getElementById('referral-check')?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
+  };
+
+  useEffect(() => {
+    if (!demo || !verdict) return;
+    const panel = document.querySelector('.referral-result');
+    if (!panel) return;
+    const box = panel.getBoundingClientRect();
+    if (box.top < 0 || box.bottom > window.innerHeight) panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, [demo, verdict]);
+
+  const submit = async (event: FormEvent) => {
+    event.preventDefault();
+    if (!ready) return;
+    await evaluate(answers);
+  };
 
   return <section className="referral-tool" aria-label="Referral survey">
     <form onSubmit={submit}>
+      <div className="referral-actions top">
+        <button className="pill light" type="button" onClick={fillDemo}>Fill for demo <ArrowRight size={16} strokeWidth={1.5} aria-hidden="true"/></button>
+      </div>
       {referralGroups.map(([group, questions]) => <div className="referral-group" key={group}>
         <h3>{group}</h3>
-        {questions.map(([key, label]) => <fieldset key={key}>
+        {questions.map(([key, label]) => <fieldset key={key} id={`referral-${key}`}>
           <legend>{label}</legend>
           <div className="tri" role="radiogroup" aria-label={label}>
             {([['yes', 'Yes'], ['no', 'No'], ['unknown', 'Not sure']] as const).map(([value, text]) =>
-              <button key={value} type="button" role="radio" aria-checked={answers[key] === value} className={answers[key] === value ? 'on' : ''} onClick={() => { setAnswers(current => ({ ...current, [key]: value })); setReview(null); }}>{text}</button>)}
+              <button key={value} type="button" role="radio" aria-checked={answers[key] === value} className={answers[key] === value ? 'on' : ''} onClick={() => { setAnswers(current => ({ ...current, [key]: value })); setReview(null); setDemo(false); }}>{text}</button>)}
           </div>
         </fieldset>)}
       </div>)}
       {error && <p className="referral-error" role="alert">{error}</p>}
-      <button className="pill dark" type="submit" disabled={!ready || busy}>{busy ? 'Checking…' : 'Check referral'}</button>
+      <div className="referral-actions">
+        <button className="pill dark" id="referral-check" type="submit" disabled={!ready || busy}>{busy ? 'Checking…' : 'Check referral'}</button>
+      </div>
     </form>
     <aside className="referral-result" aria-live="polite">
-      {verdict ? <>
+      {demo && verdict ? <>
+        <h2>You might have ALS</h2>
+        <p>Oh, you might have ALS. Speak with a doctor. Your nearest specialist is <a href={nearestSpecialist.href} target="_blank" rel="noreferrer">{nearestSpecialist.name}</a> at the {nearestSpecialist.clinic}, {nearestSpecialist.place}. {nearestSpecialist.phone}.</p>
+        {verdict.items.length > 0 && <ul>{verdict.items.map(item => <li key={item}>{item}</li>)}</ul>}
+      </> : verdict ? <>
         <h2>{verdict.title}</h2>
         <p>{verdict.copy}</p>
         {verdict.items.length > 0 && <ul>{verdict.items.map(item => <li key={item}>{item}</li>)}</ul>}
@@ -277,7 +324,7 @@ function ResearchLanding({ go }: { go: Go }) {
     <section className="network-hero">
       <div className="network-copy">
         <p className="network-kicker">Research network</p>
-        <h1>A self-improving dataset for ALS.</h1>
+        <h1>A self-improving dataset for ALS</h1>
         <p>A consent-based network where patients, researchers, and clinicians contribute to a growing, longitudinal dataset that advances ALS care.</p>
         <ul>
           {['Patient-driven and consent-first', 'Longitudinal, real-world observations', 'Contributions from researchers and clinicians'].map(item => <li key={item}><Check size={16} strokeWidth={2.25} aria-hidden="true"/>{item}</li>)}
@@ -291,8 +338,8 @@ function ResearchLanding({ go }: { go: Go }) {
           <em><i/>Actively growing</em>
         </header>
         <div className="network-stats">
-          {[['Contributors', '1,284', '+12%'], ['Observations', '48,392', '+18%'], ['Research projects', '14', '+3']].map(([label, value, delta]) =>
-            <article key={label}><small>{label}</small><p><strong>{value}</strong><span>{delta}</span></p></article>)}
+          {[['Contributors', '1,284'], ['Observations', '48,392'], ['Research projects', '14']].map(([label, value]) =>
+            <article key={label}><small>{label}</small><strong>{value}</strong></article>)}
         </div>
         <div className="network-board">
           <div className="network-growth">
@@ -317,7 +364,7 @@ function ResearchLanding({ go }: { go: Go }) {
       </section>
     </section>
     <section className="network-flywheel" aria-label="How the dataset improves">
-      <h2>A dataset that gets stronger over time.</h2>
+      <h2>A dataset that gets stronger over time</h2>
       <ol>
         {steps.map(([Icon, title, copy], index) => <li key={title}>
           {index > 0 && <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true"/>}
