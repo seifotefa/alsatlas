@@ -68,6 +68,7 @@ export function ResearcherDesk() {
   const [onset, setOnset] = useState(onsets[0]);
   const [region, setRegion] = useState(regions[0]);
   const [notice, setNotice] = useState('');
+  const [rewarding, setRewarding] = useState(false);
   const peak = institutions[0][2];
   const slice = useMemo(() => [age, sex, onset, region].filter(item => !item.startsWith('All') && item !== 'Any onset'), [age, sex, onset, region]);
 
@@ -173,7 +174,9 @@ export function ResearcherDesk() {
       </>}
       <section className="net-reward" aria-labelledby="solana-reward">
         <h2 id="solana-reward">Solana reward</h2>
-        <p>A fixed Solana transfer after review. It is not payment for medical data.</p>
+        <p>Accept a simulated dataset batch and credit each participant $5 worth of SOL.</p>
+        <button type="button" disabled={rewarding} onClick={async () => { setRewarding(true); try { const response = await fetch('/api/research/demo/accept-dataset', { method: 'POST' }); const data = await response.json(); setNotice(response.ok ? `Dataset accepted. Alex credited $${data.participantCredited} in SOL.` : data.error || 'Dataset payout could not be completed.'); } catch { setNotice('Dataset payout could not be completed.'); } finally { setRewarding(false); } }}>{rewarding ? 'Processing dataset…' : 'Accept dataset & pay participants'}</button>
+        {notice && <p className="net-notice" role="status">{notice}</p>}
       </section>
     </main>
   </div>;
