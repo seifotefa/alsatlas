@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "esbuild src/server.ts --bundle --platform=node --format=esm --target=node22 --packages=external --outfile=dist/server.js",
+    "typecheck": "tsc --noEmit --pretty false",
     "start": "node dist/server.js",
-    "test": "tsx --test src/research-service.test.ts",
+    "test": "node --import tsx --test src/*.test.ts",
     "solana:setup": "tsx src/devnet-setup.ts"
   },
   "dependencies": {
