@@ -27,8 +27,8 @@ describe('ALSense MVP', () => {
     }));
     render(<App />);
     fireEvent.click(screen.getByRole('button', { name: 'Research' }));
-    expect(await screen.findByRole('heading', { name: 'Research network' })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: /open research dashboard/i }));
+    expect(await screen.findByRole('heading', { name: /self-improving dataset for ALS/i })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /explore the network/i }));
     expect(await screen.findByRole('heading', { name: 'University desk' })).toBeInTheDocument();
     expect(screen.getByText('Dr. Priya Shah')).toBeInTheDocument();
     expect(screen.getByText('Virtual follow-up')).toBeInTheDocument();

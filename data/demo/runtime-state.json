@@ -242,11 +242,11 @@
     "patientId": "demo-alex-chen",
     "enabled": true,
     "categories": {
-      "questions": true,
+      "questions": false,
       "movement": true,
       "voice": true
     },
-    "updatedAt": "2026-11-08T06:06:02.647Z"
+    "updatedAt": "2026-11-08T15:11:38.799Z"
   },
   "members": [
     {

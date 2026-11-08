@@ -3,7 +3,7 @@ import { blobToDataUrl, playMpeg, recordUntilSilence, stopPlayback } from './rec
 
 type Phase = 'idle' | 'listening' | 'thinking' | 'speaking';
 
-const greeting = "I'm here. Tell me how today feels.";
+const greeting = 'How is Alex’s energy today: lower than usual, about usual, or higher than usual?';
 const quiet = Array.from({ length: 16 }, () => 0.15);
 let activeSession: AbortController | null = null;
 
@@ -79,7 +79,7 @@ export function VoiceCheckin({ onDone }: { onDone: () => void }) {
         if (data.threadId) threadId = data.threadId;
         if (controller.signal.aborted) break;
         await speak(data.say || '', controller.signal, data.audioBase64);
-        if (data.escalation === 'urgent') break;
+        if (data.done) break;
       }
     } catch (caught) {
       if (!controller.signal.aborted) setError(caught instanceof Error ? caught.message : 'The microphone could not be used.');

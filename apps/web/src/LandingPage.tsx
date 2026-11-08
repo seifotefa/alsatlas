@@ -1,14 +1,22 @@
 import { useState, type FormEvent, type ReactNode } from 'react';
 import Activity from 'lucide-react/dist/esm/icons/activity';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import ArrowUpRight from 'lucide-react/dist/esm/icons/arrow-up-right';
+import AudioLines from 'lucide-react/dist/esm/icons/audio-lines';
+import ChartColumn from 'lucide-react/dist/esm/icons/chart-column';
+import Check from 'lucide-react/dist/esm/icons/check';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import FlaskConical from 'lucide-react/dist/esm/icons/flask-conical';
 import HeartPulse from 'lucide-react/dist/esm/icons/heart-pulse';
+import Layers from 'lucide-react/dist/esm/icons/layers';
 import MessageCircle from 'lucide-react/dist/esm/icons/message-circle';
+import PersonStanding from 'lucide-react/dist/esm/icons/person-standing';
 import Search from 'lucide-react/dist/esm/icons/search';
+import Sparkles from 'lucide-react/dist/esm/icons/sparkles';
 import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Video from 'lucide-react/dist/esm/icons/video';
+import Wind from 'lucide-react/dist/esm/icons/wind';
 import mark from './assets/mark.png';
 import './landing.css';
 
@@ -257,38 +265,67 @@ function Diagnosis() {
 }
 
 function ResearchLanding({ go }: { go: Go }) {
-  const steps = ['Patient consent', 'Time-stamped observations', 'De-identification and governance', 'Approved research access'];
-  return <main className="research-page">
-    <header className="research-top">
-      <div>
-        <h1>Research network</h1>
-        <p>A consent-based longitudinal dataset for ALS research.</p>
+  const points = [[18, 118], [78, 104], [138, 90], [198, 74], [258, 52], [318, 28]];
+  const line = points.map(([x, y], index) => `${index ? 'L' : 'M'}${x} ${y}`).join(' ');
+  const steps = [
+    [Users, 'Contribute', 'Patients, researchers, and clinicians add data'],
+    [Layers, 'Aggregate', 'Longitudinal data grows with each contribution'],
+    [Sparkles, 'Learn', 'New insights improve care and research'],
+    [ChartColumn, 'Impact', 'Better detection, monitoring, and treatment'],
+  ] as const;
+  return <main className="network">
+    <section className="network-hero">
+      <div className="network-copy">
+        <p className="network-kicker">Research network</p>
+        <h1>A self-improving dataset for ALS.</h1>
+        <p>A consent-based network where patients, researchers, and clinicians contribute to a growing, longitudinal dataset that advances ALS care.</p>
+        <ul>
+          {['Patient-driven and consent-first', 'Longitudinal, real-world observations', 'Contributions from researchers and clinicians'].map(item => <li key={item}><Check size={16} strokeWidth={2.25} aria-hidden="true"/>{item}</li>)}
+        </ul>
+        <button className="pill dark" onClick={() => go('researcher')}>Explore the network <ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true"/></button>
       </div>
-      <button className="research-open" onClick={() => go('researcher')}>Open research dashboard</button>
-    </header>
-    <section className="research-metrics" aria-label="Research model">
-      <article><small>Data categories</small><strong>Function, movement, speech, breathing</strong></article>
-      <article><small>Participation</small><strong>Voluntary and separate from care</strong></article>
-      <article><small>Reward model</small><strong>$1 per accepted point</strong></article>
+      <section className="network-panel" aria-label="ALS Research Network">
+        <header>
+          <span className="network-mark" aria-hidden="true"><Layers size={16} strokeWidth={1.75}/></span>
+          <div><b>ALS Research Network</b><small>A growing, consent-based dataset</small></div>
+          <em><i/>Actively growing</em>
+        </header>
+        <div className="network-stats">
+          {[['Contributors', '1,284', '+12%'], ['Observations', '48,392', '+18%'], ['Research projects', '14', '+3']].map(([label, value, delta]) =>
+            <article key={label}><small>{label}</small><p><strong>{value}</strong><span>{delta}</span></p></article>)}
+        </div>
+        <div className="network-board">
+          <div className="network-growth">
+            <b>Dataset growth</b>
+            <svg viewBox="0 0 340 148" role="img" aria-label="Dataset growth from June to November">
+              <line x1="18" y1="28" x2="322" y2="28"/><line x1="18" y1="68" x2="322" y2="68"/><line x1="18" y1="108" x2="322" y2="108"/>
+              <path d={`${line} L318 128 L18 128 Z`} className="fill"/>
+              <path d={line} className="stroke"/>
+              {points.map(([x, y]) => <circle key={`${x}-${y}`} cx={x} cy={y} r="3.5"/>)}
+            </svg>
+            <div className="axis"><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span></div>
+          </div>
+          <aside>
+            <b>Recent contributions</b>
+            <ul>
+              <li><PersonStanding size={16} strokeWidth={1.75} aria-hidden="true"/><span>Movement check-in<small>2 min ago</small></span></li>
+              <li><AudioLines size={16} strokeWidth={1.75} aria-hidden="true"/><span>Voice sample<small>14 min ago</small></span></li>
+              <li><Wind size={16} strokeWidth={1.75} aria-hidden="true"/><span>Respiratory (FVC)<small>27 min ago</small></span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
     </section>
-    <section className="research-pipeline">
-      <h2>Longitudinal data model</h2>
+    <section className="network-flywheel" aria-label="How the dataset improves">
+      <h2>A dataset that gets stronger over time.</h2>
       <ol>
-        {steps.map((step, index) => <li key={step}><span>{index + 1}</span><b>{step}</b></li>)}
+        {steps.map(([Icon, title, copy], index) => <li key={title}>
+          {index > 0 && <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true"/>}
+          <span><Icon size={18} strokeWidth={1.75} aria-hidden="true"/></span>
+          <div><b>{title}</b><small>{copy}</small></div>
+        </li>)}
       </ol>
     </section>
-    <section className="research-table">
-      <h2>Research access models</h2>
-      <table>
-        <thead><tr><th>Who</th><th>How access is earned</th></tr></thead>
-        <tbody>
-          <tr><td>Institution</td><td>Pays for the current consented dataset</td></tr>
-          <tr><td>Researcher</td><td>Contributes findings that improve the set</td></tr>
-          <tr><td>Physician</td><td>Offers consultations or volunteer time</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <p className="research-note">Participation is voluntary, and research access is governed. A Solana reward follows review. It is not payment for medical data.</p>
   </main>;
 }
 

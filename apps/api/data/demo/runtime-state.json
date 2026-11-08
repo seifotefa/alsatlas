@@ -177,7 +177,16 @@
     }
   ],
   "media": [],
-  "referrals": [],
+  "referrals": [
+    {
+      "id": "ref-1794149362816",
+      "patientId": "demo-alex-chen",
+      "createdAt": "2026-11-08T14:49:22.817Z",
+      "type": "specialist",
+      "summary": "Progressive movement and speech changes reported for clinician review.",
+      "status": "draft"
+    }
+  ],
   "consent": {
     "patientId": "demo-alex-chen",
     "enabled": false,
