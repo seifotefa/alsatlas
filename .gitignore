@@ -13,4 +13,6 @@ data/interim/**
 data/processed/**
 !data/processed/.gitkeep
 reports/*.json
+data/runtime/**
+*-keypair.json
 

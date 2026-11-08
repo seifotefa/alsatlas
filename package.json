@@ -7,7 +7,8 @@
     "dev:web": "npm --workspace @alsense/web run dev",
     "dev:api": "npm --workspace @alsense/api run dev",
     "build": "npm --workspace @alsense/web run build && npm --workspace @alsense/api run build",
-    "test:web": "npm --workspace @alsense/web run test"
+    "test:web": "npm --workspace @alsense/web run test",
+    "test:api": "npm --workspace @alsense/api run test"
   },
   "devDependencies": {"npm-run-all": "^4.1.5"}
 }
