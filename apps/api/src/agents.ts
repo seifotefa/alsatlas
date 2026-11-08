@@ -80,7 +80,7 @@ export function checkinClosing(notes: string[]) {
 export function checkinTurn(transcript: string, threadId?: string) {
   const id = threadId || `checkin-${Date.now()}-${++checkinSeq}`;
   const session = sessions.get(id) ?? { step: 0, notes: [] };
-  if (session.closing) return { say: session.closing, threadId: id, escalation: session.escalation || 'none', done: true };
+  if (session.closing) return { say: session.closing, threadId: id, escalation: session.escalation || 'none', done: true, notes: session.notes };
   session.notes.push(transcript);
   session.step += 1;
   sessions.set(id, session);
@@ -93,5 +93,5 @@ export function checkinTurn(transcript: string, threadId?: string) {
   const closing = checkinClosing(session.notes);
   session.closing = closing.say;
   session.escalation = closing.escalation;
-  return { say: closing.say, threadId: id, escalation: closing.escalation, done: true };
+  return { say: closing.say, threadId: id, escalation: closing.escalation, done: true, notes: session.notes };
 }

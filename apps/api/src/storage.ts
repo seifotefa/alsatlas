@@ -10,7 +10,7 @@ export function saveDemoState(state:DemoState){try{mkdirSync(dirname(file),{recu
 const migrationPath=fileURLToPath(new URL('../migrations/001_als_atlas.sql', import.meta.url));
 let pool:any=null;
 let schemaReady=false;
-function tigerUrl(){return process.env.TIGERDATA_DATABASE_URL?.trim()||''}
+function tigerUrl(){return (process.env.TIGERDATA_DATABASE_URL?.trim()||'').replace(/([?&])sslmode=[^&]*/g,'').replace(/[?&]$/,'')}
 export function tigerConfigured(){return tigerUrl().length>0}
 async function getPool(){if(!tigerConfigured())return null;if(!pool){const {Pool}=await import('pg');pool=new Pool({connectionString:tigerUrl(),ssl:tigerUrl().includes('localhost')?undefined:{rejectUnauthorized:false},max:4,connectionTimeoutMillis:8000,query_timeout:8000,idleTimeoutMillis:20000})}return pool}
 export async function persistToTiger(sql:string,params:any[]=[]){const db=await getPool();if(!db)return false;await db.query(sql,params);return true}

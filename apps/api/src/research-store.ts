@@ -212,7 +212,8 @@ export class PgResearchRepository implements ResearchRepository {
 
   constructor(connectionString: string) {
     const local = /localhost|127\.0\.0\.1/.test(connectionString);
-    this.pool = new pg.Pool({ connectionString, ssl: local ? undefined : { rejectUnauthorized: false } });
+    const connection = connectionString.replace(/([?&])sslmode=[^&]*/g, '').replace(/[?&]$/, '');
+    this.pool = new pg.Pool({ connectionString: connection, ssl: local ? undefined : { rejectUnauthorized: false } });
   }
 
   private async ensure() {
